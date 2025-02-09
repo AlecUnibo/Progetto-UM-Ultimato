@@ -1,0 +1,37 @@
+﻿@inject IHtmlLocalizer<GestioneAccessi.Web.SharedResource> SharedLocalizer
+@inject Microsoft.Extensions.Options.IOptions<AppSettings> appSettings
+@{
+    Layout = "_LayoutHtml";
+    var version = System.Reflection.Assembly.GetAssembly(typeof(Startup)).GetName().Version;
+
+    var identitaCorrente = (GestioneAccessi.Web.Areas.IdentitaViewModel)ViewData[GestioneAccessi.Web.Areas.IdentitaViewModel.VIEWDATA_IDENTITACORRENTE_KEY];
+}
+@section metas{
+    @RenderSection("metas", false)
+}
+@section styles{
+    @RenderSection("styles", false)
+}
+<div id="pageId" class="onit-page">
+    <div class="onit-page-sticky-top" id="onit-page-sticky-top">
+        @RenderSection("pageTitle", false)
+    </div>
+    @RenderSection("pageSubtitle", false)
+    @RenderBody()
+</div>
+@section googlehead{
+    @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-', { 'anonymize_ip': true });    // Ricordarsi di anonimizzare per fare ricadere il cookie tra quelli tecnici ed evitare l'obbligo del banner
+    </script>*@
+    }
+@section scripts{
+    <script type="text/javascript">
+        @this.RenderAlertsWithToastify()
+    </script>
+
+    @RenderSection("scripts", false)
+}

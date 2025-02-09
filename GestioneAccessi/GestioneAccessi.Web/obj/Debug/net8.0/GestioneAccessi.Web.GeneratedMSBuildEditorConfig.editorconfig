@@ -1,0 +1,113 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GestioneAccessi.Web
+build_property.RootNamespace = GestioneAccessi.Web
+build_property.ProjectDir = C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi.Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi.Web
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/Example/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhhbXBsZVxVc2Vyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/Example/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhhbXBsZVxVc2Vyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/Visite/Aggiungi/Giornaliera/Giornaliera.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmlzaXRlXEFnZ2l1bmdpXEdpb3JuYWxpZXJhXEdpb3JuYWxpZXJhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/Visite/Aggiungi/Pianifica/Pianifica.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmlzaXRlXEFnZ2l1bmdpXFBpYW5pZmljYVxQaWFuaWZpY2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/Visite/Visualizza/StampaStorico/StampaStorico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmlzaXRlXFZpc3VhbGl6emFcU3RhbXBhU3Rvcmljb1xTdGFtcGFTdG9yaWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/Visite/Visualizza/Stampa/StampaLive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmlzaXRlXFZpc3VhbGl6emFcU3RhbXBhXFN0YW1wYUxpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/Visite/Visualizza/Storico/Storico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVmlzaXRlXFZpc3VhbGl6emFcU3Rvcmljb1xTdG9yaWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Areas/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/AccessoOspite/CheckIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQWNjZXNzb09zcGl0ZVxDaGVja0luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/AccessoOspite/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQWNjZXNzb09zcGl0ZVxDaGVja091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/AccessoOspite/Ingresso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQWNjZXNzb09zcGl0ZVxJbmdyZXNzby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/AccessoOspite/PaginaBlu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQWNjZXNzb09zcGl0ZVxQYWdpbmFCbHUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/AccessoOspite/Uscita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQWNjZXNzb09zcGl0ZVxVc2NpdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Features/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Views/Shared/_LayoutHtml.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRIdG1sLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Views/Shared/_PagingPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmdQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Views/Shared/_PagingPartialFilter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmdQYXJ0aWFsRmlsdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luca Zenobi/OneDrive/Desktop/interfaccia/GestioneAccessi/GestioneAccessi.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

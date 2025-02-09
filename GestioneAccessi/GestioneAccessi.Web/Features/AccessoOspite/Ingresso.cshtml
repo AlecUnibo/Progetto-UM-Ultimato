@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ingresso</title>
+    <!-- Meta tag per garantire il corretto scaling su dispositivi mobili -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/css/Features/AccessoOspite/Ingresso.css" />
+</head>
+<body class="Color-main">
+    <div class="full-screen-container">
+
+        <h1 class="Title-small">Planner.com</h1>
+
+        <div class="Card-input">
+            <form id="formIngresso" method="post" action="/AccessoOspite/Ingresso">
+                <!-- Nome -->
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="Nome" id="nome" placeholder="Nome" />
+                    <div class="error" id="errorNome">* Campo obbligatorio da compilare!!</div>
+                </div>
+
+                <!-- Cognome -->
+                <div class="form-group">
+                    <label for="cognome">Cognome:</label>
+                    <input type="text" name="Cognome" id="cognome" placeholder="Cognome" />
+                    <div class="error" id="errorCognome">* Campo obbligatorio da compilare!!</div>
+                </div>
+
+                <!-- Azienda -->
+                <div class="form-group">
+                    <label for="azienda">Azienda:</label>
+                    <input type="text" name="Azienda" id="azienda" placeholder="Azienda" />
+                    <div class="error" id="errorAzienda">* Campo obbligatorio da compilare!!</div>
+                </div>
+
+                <!-- Bottone di invio -->
+                <button type="submit" class="Buttom-input">Start Your Visit Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("formIngresso").addEventListener("submit", function (e) {
+            let valid = true;
+
+            const nome = document.getElementById("nome");
+            const cognome = document.getElementById("cognome");
+            const azienda = document.getElementById("azienda");
+
+            const errorNome = document.getElementById("errorNome");
+            const errorCognome = document.getElementById("errorCognome");
+            const errorAzienda = document.getElementById("errorAzienda");
+
+            // Validazione Nome
+            if (nome.value.trim() === "") {
+                errorNome.style.display = "block";
+                valid = false;
+            } else {
+                errorNome.style.display = "none";
+            }
+
+            // Validazione Cognome
+            if (cognome.value.trim() === "") {
+                errorCognome.style.display = "block";
+                valid = false;
+            } else {
+                errorCognome.style.display = "none";
+            }
+
+            // Validazione Azienda
+            if (azienda.value.trim() === "") {
+                errorAzienda.style.display = "block";
+                valid = false;
+            } else {
+                errorAzienda.style.display = "none";
+            }
+
+            if (!valid) e.preventDefault();
+        });
+    </script>
+</body>
+</html>

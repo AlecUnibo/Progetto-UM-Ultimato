@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Areas/Visite/Aggiungi/Giornaliera/Giornaliera.css">
+    <title>Inserisci la visita</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Inserisci la visita giornaliera</h1>
+        <form method="post" action="/Visite/Giornaliera/EventoGiornaliero">
+
+            <!-- Nome/Cognome -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cognome">Cognome*</label>
+                    <input type="text" id="cognome" name="cognome" required>
+                </div>
+            </div>
+
+            <!-- Azienda -->
+            <div class="form-group">
+                <label for="azienda">Azienda*</label>
+                <input type="text" id="azienda" name="azienda" required>
+            </div>
+
+            <!-- Data -->
+            <div class="form-group">
+                <label for="data">Data*</label>
+                <input type="date" id="data" name="data" value="@DateTime.Now.ToString("yyyy-MM-dd")" readonly>
+            </div>
+
+
+            <!-- Orari -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="orario-entrata">Orario entrata</label>
+                    <input type="time" id="orario-entrata" name="orarioEntrata">
+                </div>
+                <div class="form-group">
+                    <label for="orario-uscita">Orario uscita</label>
+                    <input type="time" id="orario-uscita" name="orarioUscita">
+                </div>
+            </div>
+
+            <!-- Pulsante Conferma -->
+            <button type="submit" class="btn">Conferma</button>
+        </form>
+    </div>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let messageBox = document.createElement("div");
+                messageBox.textContent = "@TempData["SuccessMessage"]";
+                messageBox.style.position = "fixed";
+                messageBox.style.top = "10px";
+                messageBox.style.left = "50%";
+                messageBox.style.transform = "translateX(-50%)";
+                messageBox.style.backgroundColor = "#4CAF50";
+                messageBox.style.color = "white";
+                messageBox.style.padding = "15px";
+                messageBox.style.borderRadius = "5px";
+                messageBox.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
+                messageBox.style.zIndex = "1000";
+
+                document.body.appendChild(messageBox);
+
+                setTimeout(() => {
+                    messageBox.style.opacity = "0";
+                    setTimeout(() => messageBox.remove(), 500);
+                }, 2000);
+            });
+        </script>
+    }
+</body>
+</html>

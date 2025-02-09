@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+    var ingressi = Model as List<string>;
+}
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stampa</title>
+    <link rel="stylesheet" href="~/css/Areas/Visite/Visualizza/Stampa/StampaLive.css" />
+    <script>
+        window.onload = function() {
+            window.print();
+        };
+    </script>
+</head>
+<body>
+    <h1>Lista visitatori presenti in azienda</h1>
+    <ul>
+        @if (ingressi != null && ingressi.Count > 0)
+        {
+            @foreach (var ingresso in ingressi)
+            {
+                <li>@ingresso</li>
+            }
+        }
+        else
+        {
+            <p>Nessun visitatore presente.</p>
+        }
+    </ul>
+</body>
+</html>

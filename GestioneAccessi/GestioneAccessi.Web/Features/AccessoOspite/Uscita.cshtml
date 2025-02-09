@@ -1,0 +1,75 @@
+﻿Uscita.cshtml
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uscita</title>
+    <link rel="stylesheet" href="~/css/Features/AccessoOspite/Uscita.css" />
+</head>
+<body class="Color-main">
+
+    <div class="full-screen-container">
+
+        <h1 class="Title-small">Planner.com</h1>
+
+        <div class="Card-input">
+
+            <div class="Feedback-title">
+                <h2>Lascia un feedback</h2>
+            </div>
+
+            <!-- Sezione stelle di valutazione -->
+            <div class="star-container" id="starContainer">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+
+            <!-- Form di feedback -->
+            <div class="Feedback-form">
+                <textarea placeholder="Aggiungi un commento..."></textarea>
+            </div>
+
+            <!-- Messaggio di ringraziamento -->
+            <div class="Thanks-message">
+                Grazie per aver condiviso la tua esperienza. Ogni recensione ci aiuta a migliorare e offrire un servizio migliore.
+            </div>
+
+            <!-- Pulsante che invia una richiesta POST al metodo UscitaPost del controller -->
+            <div class="button-wrapper" style="margin-left: auto; margin-right: auto;">
+                <form method="post" action="/AccessoOspite/UscitaPost">
+                    <button type="submit" class="Buttom-input">
+                        Effettua il check-out
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach((star, index) => {
+            star.addEventListener('click', function () {
+                // Rimuove la classe "selected" da tutte le stelle
+                stars.forEach(s => s.classList.remove('selected'));
+
+                // Aggiunge la classe "selected" alle stelle fino a quella cliccata
+                for (let i = 0; i <= index; i++) {
+                    stars[i].classList.add('selected');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

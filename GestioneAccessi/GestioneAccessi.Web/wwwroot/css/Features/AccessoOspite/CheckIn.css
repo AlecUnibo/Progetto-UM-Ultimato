@@ -1,0 +1,141 @@
+.Color-main {
+    background-color: #243473;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Evita scrolling */
+    font-size: 16px;
+}
+
+.full-screen-container {
+    height: 100vh; /* Occupa tutta la schermata */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spaziatura uniforme */
+    align-items: center;
+    background-color: #243473;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+}
+
+.Title-small {
+    color: white;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 1vh; /* Ridotto il margine inferiore */
+}
+
+img {
+    width: 50vw; /* Immagine più grande */
+    max-width: 180px; /* Evita che diventi enorme su desktop */
+    height: auto;
+    margin-bottom: 1vh; /* Ridotto il margine inferiore */
+}
+
+.Card-confirmation {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2vh 2vw;
+    width: 45%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #243473;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 1.5vh;
+}
+
+.thanks-message {
+    color: white;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    text-align: center;
+    margin-bottom: 1.5vh;
+}
+
+.followus {
+    text-align: center;
+    width: 100%;
+    margin-top: 1vh; /* Leggermente ridotto per migliorare il bilanciamento */
+}
+
+    .followus h3 {
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+        margin-bottom: 1vh;
+        color: white;
+    }
+
+/* Mantiene i loghi sulla stessa riga */
+.socialmedialogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    flex-wrap: nowrap; /* Evita il ritorno a capo */
+    width: 100%;
+}
+
+    .socialmedialogos img {
+        width: 3vw;
+        max-width: 40px;
+        height: auto;
+    }
+
+/* Adattamenti per desktop */
+@media (min-width: 1024px) {
+    .full-screen-container {
+        padding: 2vh 10vw;
+    }
+
+    img {
+        width: 15vw; /* Immagine più grande anche su desktop */
+        max-width: 200px;
+    }
+
+    .Card-confirmation {
+        width: 40%;
+        font-size: 1rem;
+    }
+
+    .socialmedialogos img {
+        width: 2.5vw;
+        max-width: 35px;
+    }
+}
+
+/* Adattamenti per schermi più piccoli (tablet e mobile) */
+@media (max-width: 768px) {
+    .Title-small {
+        font-size: 5vw;
+        margin-bottom: 2vh;
+    }
+
+    img {
+        width: 30vw; /* Più grande su mobile */
+        margin-bottom: 1vh;
+    }
+
+    .Card-confirmation {
+        width: 80%;
+        font-size: 1.2rem;
+        padding: 3vh 4vw;
+    }
+
+    .thanks-message {
+        font-size: 1rem;
+    }
+
+    .followus h3 {
+        font-size: 1rem;
+    }
+
+    .socialmedialogos img {
+        width: 6vw;
+        max-width:  30px;
+            
+    }
+}

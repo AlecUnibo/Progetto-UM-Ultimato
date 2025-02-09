@@ -1,0 +1,71 @@
+﻿@model GestioneAccessi.Web.Features.Login.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/css/Features/Login/Login.css" />
+</head>
+<body>
+
+    <div class="full-screen-container Color-main">
+        <!-- Titolo -->
+        <h1 class="Title">Planner.com</h1>
+
+        <!-- Card -->
+        <div class="Card-big">
+            <!-- Sezione per il messaggio di errore generale -->
+            @if (ViewData["LoginError"] != null)
+            {
+                <div class="error-message">
+                    @ViewData["LoginError"]
+                </div>
+            }
+
+            <form method="post" role="form" autocomplete="off">
+                <input asp-for="ReturnUrl" type="hidden" />
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label asp-for="Email" class="onit-label-required"></label>
+                    <div class="input-group onit-input-group-union">
+                        <input asp-for="Email" class="form-control" type="text" />
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label asp-for="Password" class="onit-label-required"></label>
+                    <div class="input-group onit-input-group-union">
+                        <input asp-for="Password" class="form-control" type="password" />
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <!-- Pulsante di login -->
+                <div class="form-group">
+                    <button type="submit" class="Buttom-input">Accedi</button>
+                </div>
+
+                <!-- Link per password dimenticata -->
+                <a href="#" class="forgot-password-link">Hai dimenticato la password?</a>
+            </form>
+        </div>
+
+        <!-- QR Code -->
+        <div class="qr-code-container">
+            <a href="@Url.Action("PaginaBlu", "AccessoOspite")">
+                <img src="~/images/qrcode.png" alt="QR Code" class="qr-code" />
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>

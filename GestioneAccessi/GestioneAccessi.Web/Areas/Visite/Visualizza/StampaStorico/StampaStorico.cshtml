@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;  // Assicurati di non utilizzare un layout predefinito, se necessario
+}
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StampaStorico</title>
+    <script>
+        window.onload = function() {
+            window.print();  // Attiva la funzione di stampa quando la pagina è completamente caricata
+        };
+    </script>
+
+</head>
+<body>
+
+    <h1>Stampa dello storico dei visitatori </h1>
+    <ol>
+        @foreach (var evento in Model)
+        {
+            <li>@evento.Nome @evento.Cognome (@evento.Azienda)</li>
+        }
+    </ol>
+</body>
+</html>

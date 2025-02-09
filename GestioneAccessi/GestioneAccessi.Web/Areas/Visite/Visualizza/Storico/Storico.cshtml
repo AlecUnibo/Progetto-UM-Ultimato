@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="~/css/Areas/Visite/Visualizza/Storico/Storico.css" />
+</head>
+<body>
+    <!-- Barra di navigazione -->
+    <div class="navbar">
+        <div class="left-section">
+            <div class="logo">Planner.com</div>
+            <a href="@Url.Action("Index", "Home", new { area = "Features" })">
+                <img src="~/images/home.png" alt="Home Icon" class="icon">
+                Home
+            </a>
+            <a href="#">
+                <img src="~/images/Calendario.png" alt="Storico Icon" class="icon">
+                <span class="translate" data-key="history">Storico</span>
+            </a>
+        </div>
+        <div class="right-section">
+            <a href="#" class="language-selector">IT</a>
+            <div class="popup-menu" id="language-popup">
+                <div class="menu-item" data-lang="ENG">ENG</div>
+                <div class="menu-item selected" data-lang="IT">IT</div>
+            </div>
+            <a href="#" id="help-button">?</a>
+            <div class="popup-menu" id="help-popup">
+                <div class="menu-item" data-key="version">Versione</div>
+                <div class="menu-item" data-key="manual">Manuale</div>
+                <div class="menu-item" data-key="assistance">Assistenza</div>
+            </div>
+            <div>VEM</div>
+        </div>
+    </div>
+
+    <!-- Sezione filtri-->
+    <div class="filters-container">
+        <div class="search-section">
+            <!-- Prima riga -->
+            <div class="search-row">
+                <div class="search-group">
+                    <label for="data" class="translate" data-key="date">Data</label>
+                    <input type="text" id="data" placeholder="YYYY-MM-DD">
+                </div>
+                <div class="search-group">
+                    <label for="entrata" class="translate" data-key="entry">Entrata</label>
+                    <input type="time" id="entrata" placeholder="HH/MM">
+                </div>
+                <div class="search-group">
+                    <label for="uscita" class="translate" data-key="exit">Uscita</label>
+                    <input type="time" id="uscita" placeholder="HH/MM">
+                </div>
+            </div>
+
+            <!-- Seconda riga -->
+            <div class="search-row">
+                <div class="search-group">
+                    <label for="nome" class="translate" data-key="name">Nome</label>
+                    <input type="text" id="nome">
+                </div>
+                <div class="search-group">
+                    <label for="cognome" class="translate" data-key="surname">Cognome</label>
+                    <input type="text" id="cognome">
+                </div>
+                <div class="search-group">
+                    <label for="azienda" class="translate" data-key="company">Azienda</label>
+                    <input type="text" id="azienda">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sezione Pulsanti -->
+
+    <div class="search-buttons-container">
+        <!-- Pulsante di ricerca -->
+        <div class="search-buttons">
+            <button id="search-button">
+                <img src="~/images/search.png" alt="Search Icon" class="icon">
+                <span class="translate" data-key="search">Cerca</span>
+            </button>
+        </div>
+
+        <!-- Tasti laterali -->
+        <div class="button-container">
+            <div class="img-link" id="settings-button">
+                <img src="~/images/EsportaFile.png" alt="Impostazioni">
+            </div>
+            <div class="popup-menu" id="settings-popup">
+                <a>Esporta come:</a>
+                <div class="menu-item">
+                    <img src="~/images/pdf.png" alt="Esporta PDF" class="export-icon">
+                </div>
+                <div class="menu-item">
+                    <img src="~/images/word.png" alt="Esporta Word" class="export-icon">
+                </div>
+                <div class="menu-item">
+                    <img src="~/images/excel.png" alt="Esporta Excel" class="export-icon">
+                </div>
+                <div class="menu-item">
+                    <img src="~/images/csv.png" alt="Esporta CSV" class="export-icon">
+                </div>
+                <div class="menu-item">
+                    <img src="~/images/txt.png" alt="Esporta txt" class="export-icon">
+                </div>
+            </div>
+            <div class="button-container">
+                <a class="img-link" id="print-button">
+                    <img src="~/images/stampante.png" alt="Stampa">
+                </a>
+            </div>
+
+        </div>
+    </div>
+   <!--MODIFICA DA QUIII--> 
+    <!-- Tabella -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th data-key="date">Data</th>
+                    <th data-key="entry">Entrata</th>
+                    <th data-key="exit">Uscita</th>
+                    <th data-key="name">Nome</th>
+                    <th data-key="surname">Cognome</th>
+                    <th data-key="company">Azienda</th>
+                    <th data-key="actions">Azioni</th>
+                </tr>
+            </thead>
+            <tbody id="visits-table">
+                <tr id="no-visits-row">
+                    <td colspan="7">Non ci sono visite al momento</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="delete-confirmation-popup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <p>Confermi di voler eliminare definitivamente questa visita?</p>
+            <button id="cancel-delete">Annulla</button>
+            <button id="confirm-delete">Ok</button>
+        </div>
+    </div>
+    <!--A QUIII-->
+    <script>
+        const translations = {
+            ENG: {
+                home: "Home",
+                history: "History",
+                date: "Date",
+                entry: "Entry",
+                exit: "Exit",
+                name: "Name",
+                surname: "Surname",
+                company: "Company",
+                search: "Search",
+                actions: "Actions",
+                version: "Version",
+                manual: "Manual",
+                assistance: "Assistance",
+            },
+            IT: {
+                home: "Home",
+                history: "Storico",
+                date: "Data",
+                entry: "Entrata",
+                exit: "Uscita",
+                name: "Nome",
+                surname: "Cognome",
+                company: "Azienda",
+                search: "Cerca",
+                actions: "Azioni",
+                version: "Versione",
+                manual: "Manuale",
+                assistance: "Assistenza",
+            }
+        };
+        document.addEventListener("DOMContentLoaded", function () {
+            const languageSelector = document.querySelector(".language-selector");
+            const languagePopup = document.getElementById("language-popup");
+            const menuItems = document.querySelectorAll(".popup-menu .menu-item");
+            const helpButton = document.getElementById("help-button");
+            const helpPopup = document.getElementById("help-popup");
+            const settingsButton = document.getElementById("settings-button");
+            const settingsPopup = document.getElementById("settings-popup");
+            //MODIFICATO DA QUII
+            const visitsTable = document.getElementById("visits-table");
+            const noVisitsRow = document.getElementById("no-visits-row");
+            const deletePopup = document.getElementById("delete-confirmation-popup");
+            const cancelDelete = document.getElementById("cancel-delete");
+            const confirmDelete = document.getElementById("confirm-delete");
+            
+            loadIngressi();
+            loadIngressiAd();
+            let deleteRow = null;
+
+            document.getElementById("search-button").addEventListener("click", function () {
+                console.log("Pulsante Cerca cliccato!");
+                let data = document.getElementById("data").value || "";
+                let entrata = document.getElementById("entrata").value || "";
+                let uscita = document.getElementById("uscita").value || "";
+                let nome = document.getElementById("nome").value || "";
+                let cognome = document.getElementById("cognome").value || "";
+                let azienda = document.getElementById("azienda").value || "";
+                let searchParams = {
+                    data: data,
+                    entrata: entrata,
+                    uscita: uscita,
+                    nome: nome,
+                    cognome: cognome,
+                    azienda: azienda
+                };
+                fetch('/Visite/Storico/FiltraIngressi', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(searchParams)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Risposta dal server:", data);
+                    let visitsTable = document.getElementById("visits-table");
+                    visitsTable.innerHTML = ""; // Svuota la tabella prima di popolarla
+                    if (data.ingressiEvent.length === 0 && data.ingressiAd.length === 0) {
+                        visitsTable.innerHTML = '<tr id="no-visits-row"><td colspan="7">Nessun risultato trovato</td></tr>';
+                    } else {
+                        data.ingressiEvent.forEach(evento => createRow(evento, 'IngressoEvent'));
+                        data.ingressiAd.forEach(evento => createRow(evento, 'IngressoAd'));
+                    }
+                })
+                .catch(error => console.error('Errore nel filtraggio:', error));
+            });
+            //A QUIII
+            languageSelector.addEventListener("click", function (event) {
+                event.preventDefault();
+                const isVisible = languagePopup.style.display === "block";
+                languagePopup.style.display = isVisible ? "none" : "block";
+                helpPopup.style.display = "none";
+            });
+
+            menuItems.forEach((item) => {
+                item.addEventListener("click", function () {
+                    const selectedLang = this.dataset.lang;
+
+                    menuItems.forEach((el) => el.classList.remove("selected"));
+                    this.classList.add("selected");
+
+                    languageSelector.textContent = selectedLang;
+
+                    updatePageLanguage(selectedLang);
+                    languagePopup.style.display = "none";
+                });
+            });
+
+            helpButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                const isVisible = helpPopup.style.display === "block";
+                helpPopup.style.display = isVisible ? "none" : "block";
+                languagePopup.style.display = "none";
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!languageSelector.contains(event.target) && !languagePopup.contains(event.target)) {
+                    languagePopup.style.display = "none";
+                }
+                if (!helpButton.contains(event.target) && !helpPopup.contains(event.target)) {
+                    helpPopup.style.display = "none";
+                }
+            });
+
+            function updatePageLanguage(lang) {
+                const texts = translations[lang];
+                document.querySelectorAll("[data-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-key");
+                    element.textContent = texts[key] || element.textContent;
+                });
+            }
+
+            // Mostra/nasconde il pop-up delle impostazioni
+            settingsButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                const isVisible = settingsPopup.style.display === "block";
+                settingsPopup.style.display = isVisible ? "none" : "block";
+            });
+
+            // Chiude il pop-up cliccando fuori
+            document.addEventListener("click", function (event) {
+                if (!settingsButton.contains(event.target) && !settingsPopup.contains(event.target)) {
+                    settingsPopup.style.display = "none";
+                }
+            });
+            //MODIFICA DA QUIIIII
+            function loadIngressi() {
+                fetch('/api/ingressi')
+                    .then(response => response.json())
+                    .then(data => {
+                        let oggi = new Date();
+                        oggi.setHours(0, 0, 0, 0); // Consideriamo solo la data, ignorando l'ora
+                        let ingressiFiltrati = data
+                            .filter(evento => new Date(evento.data) < oggi) // Prende solo le date precedenti a oggi
+                            .sort((a, b) => new Date(b.data) - new Date(a.data)); // Ordina per data discendente
+                        ingressiFiltrati.forEach(evento => createRow(evento, 'IngressoEvent'));
+                    })
+                    .catch(error => console.error('Errore nel recupero degli ingressi:', error));
+            }
+            function loadIngressiAd() {
+                fetch('/api/ingressiAd')
+                    .then(response => response.json())
+                    .then(data => {
+                        let oggi = new Date();
+                        oggi.setHours(0, 0, 0, 0);
+                        let ingressiFiltrati = data
+                            .filter(evento => new Date(evento.data) < oggi)
+                            .sort((a, b) => new Date(b.data) - new Date(a.data));
+                        ingressiFiltrati.forEach(evento => createRow(evento, 'IngressoAd'));
+                    })
+                    .catch(error => console.error('Errore nel recupero degli ingressi Ad:', error));
+            }
+            // Funzione per creare una riga nella tabella
+            function createRow(data, eventType) {
+                const visitsTable = document.getElementById("visits-table");
+                const noVisitsRow = document.getElementById("no-visits-row");
+                let formattedDate = data.data.split("T")[0];
+                const row = document.createElement("tr");
+                row.dataset.eventId = data.id;
+                row.dataset.eventType = eventType;
+                row.innerHTML = `
+                    <td>${formattedDate}</td>
+                    <td>${data.orarioIngresso}</td>
+                    <td>${data.orarioUscita || "-"}</td>
+                    <td>${data.nome}</td>
+                    <td>${data.cognome}</td>
+                    <td>${data.azienda}</td>
+                    <td class="actions">
+                        <img src="@Url.Content("~/images/cestino.png")" alt="Elimina" class="action-icon" title="Elimina Riga"/>
+                    </td>
+                `;
+                if (noVisitsRow) noVisitsRow.remove();
+                visitsTable.appendChild(row);
+            }
+            // Mostra il pop-up quando si clicca sull'icona del cestino
+            document.addEventListener("click", function (event) {
+                if (event.target.classList.contains("action-icon")) {
+                    deleteRow = event.target.closest("tr");
+                    if (deleteRow) {
+                        deletePopup.style.display = "flex"; // Mostra il pop-up
+                    }
+                }
+            });
+            // Nascondi il pop-up quando si clicca su "Annulla"
+            cancelDelete.addEventListener("click", function () {
+                deletePopup.style.display = "none";
+                deleteRow = null; // Reset della riga selezionata
+            });
+            // Nascondi il pop-up se si clicca fuori da esso
+            deletePopup.addEventListener("click", function (event) {
+                if (event.target === deletePopup) {
+                    deletePopup.style.display = "none";
+                    deleteRow = null;
+                }
+            });
+            // Conferma eliminazione
+            confirmDelete.addEventListener("click", async function () {
+                if (!deleteRow) return;
+                const eventId = deleteRow.dataset.eventId;
+                const eventType = deleteRow.dataset.eventType;
+                let apiUrl = "";
+                let requestOptions = { method: "DELETE" };
+                if (eventType === "IngressoEvent") {
+                    apiUrl = `/api/ingressi/${eventId}`;
+                } else if (eventType === "IngressoAd") {
+                    apiUrl = `/api/ingressiAd/delete`;
+                    requestOptions = {
+                        method: "DELETE",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            nome: deleteRow.querySelector("td:nth-child(4)").textContent,
+                            cognome: deleteRow.querySelector("td:nth-child(5)").textContent,
+                            azienda: deleteRow.querySelector("td:nth-child(6)").textContent
+                        })
+                    };
+                }
+                if (apiUrl) {
+                    try {
+                        const response = await fetch(apiUrl, requestOptions);
+                        if (response.ok) {
+                            deleteRow.remove();
+                            if (visitsTable.rows.length === 0 && noVisitsRow) {
+                                visitsTable.appendChild(noVisitsRow);
+                            }
+                        } else {
+                            const error = await response.json();
+                            alert("Errore durante l'eliminazione: " + error.message);
+                        }
+                    } catch (error) {
+                        alert("Si è verificato un errore durante l'eliminazione.");
+                    }
+                }
+
+                deletePopup.style.display = "none"; // Chiudi il pop-up dopo l'eliminazione
+                deleteRow = null;
+            });
+
+            document.getElementById("print-button").addEventListener("click", function (event) {
+            event.preventDefault();
+            let eventi = [];
+            document.querySelectorAll("#visits-table tr").forEach(row => {
+                let nome = row.children[3]?.textContent.trim();
+                let cognome = row.children[4]?.textContent.trim();
+                let azienda = row.children[5]?.textContent.trim();
+
+                if (nome && cognome && azienda) {
+                    eventi.push({ Nome: nome, Cognome: cognome, Azienda: azienda });
+                }
+            });
+
+            if (eventi.length > 0) {
+                fetch('@Url.Action("Index", "StampaStorico", new { area = "Visite" })', {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(eventi)
+                }).then(response => response.json())
+                    .then(data => {
+                        if (data.redirectUrl) {
+                            window.location.href = data.redirectUrl; // Reindirizza alla stampa
+                        } else {
+                            alert("Errore nella stampa.");
+                        }
+                    })
+                    .catch(error => console.error("Errore:", error));
+            } else {
+                alert("Nessun evento da stampare.");
+            }
+        });
+            //A QUIIIIII
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.Color-main {
+    background-color: #243473;
+}
+
+html, body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Evita lo scrolling */
+    font-size: 16px; /* Testo scalabile in base alla larghezza dello schermo */
+}
+
+.full-screen-container {
+    height: 100vh; /* Occupa sempre tutta l'altezza della finestra */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuisce gli elementi */
+    align-items: center;
+    background-color: #243473;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+img {
+    width: 50vw; /* Immagine più grande */
+    max-width: 180px; /* Evita che diventi enorme su desktop */
+    height: auto;
+    margin-bottom: 1vh; /* Ridotto il margine inferiore */
+}
+
+.Card-confirmation {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2vh 2vw;
+    width: 45%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #243473;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 1.5vh;
+}
+
+.thanks-message {
+    color: white;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    text-align: center;
+    margin-bottom: 1.5vh;
+}
+
+.followus {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: 1vh; /* Leggermente ridotto per migliorare il bilanciamento */
+}
+
+    .followus h3 {
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+        margin-bottom: 1vh;
+        color: white; /* Impostato il colore bianco */
+        text-align: center; /* Assicura che il testo sia centrato */
+    }
+
+
+/* Mantiene i loghi sulla stessa riga */
+.social-media-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+    .social-media-logos img {
+        width: 3vw;
+        max-width: 40px;
+        height: auto;
+    }
+
+
+
+/* Adattamenti per schermi più piccoli (tablet e mobile) */
+@media (max-width: 1024px) {
+    html, body {
+        font-size: 5vw;
+        margin-bottom: 2vh;
+        color: white;
+    }
+
+    h1 {
+        font-size: 5vw;
+        margin-bottom: 2vh;
+        color: white;
+    }
+
+    img {
+        width: 30vw; /* Più grande su mobile */
+        margin-bottom: 1vh;
+    }
+
+    .Card-confirmation {
+        width: 80%;
+        font-size: 1.2rem;
+        padding: 3vh 4vw;
+    }
+
+    .followus h3 {
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+    }
+
+    .social-media-logos img {
+        width: 6vw;
+        max-width:  30px;
+            
+    }
+}

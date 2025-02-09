@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="~/css/Features/Home/Home.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+</head>
+<body>
+    <!-- Barra di navigazione -->
+    <div class="navbar">
+        <div class="left-section">
+            <div class="logo">Planner.com</div>
+            <a href="#" class="active">
+                <img src="~/images/home.png" alt="Home Icon" class="icon">
+                Home
+            </a>
+            <a href="@Url.Action("Index", "Storico", new { area = "Visite" })">
+                <img src="~/images/Calendario.png" alt="Storico Icon" class="icon">
+                Storico
+            </a>
+        </div>
+        <div class="right-section">
+            <a href="#" class="language-selector">IT</a>
+            <div class="popup-menu" id="language-popup">
+                <div class="menu-item" data-lang="ENG">ENG</div>
+                <div class="menu-item selected" data-lang="IT">IT</div>
+            </div>
+            <a href="#" id="help-button">?</a>
+            <div class="popup-menu" id="help-popup">
+                <div class="menu-item">Versione</div>
+                <div class="menu-item">Manuale</div>
+                <div class="menu-item">Assistenza</div>
+            </div>
+            <div>VEM</div>
+        </div>
+    </div>
+
+    <!-- Sezione data -->
+    <div class="date-section">
+        <div class="date-buttons">
+            <button id="prev-day">&lt;</button>
+            <div class="date" id="current-date">
+                <a href="#"></a>
+            </div>
+            <button id="next-day">&gt;</button>
+        </div>
+
+        <div class="date-buttons">
+            <a href="@Url.Action("Index", "Giornaliera", new { area = "visite" })">
+                <img src="~/images/aggiungi_giornaliera.png" alt="Aggiungi Giornaliera" />
+            </a>
+            <a href="@Url.Action("Index", "Pianifica", new { area = "Visite" })">
+                <img src="~/images/pianifica_visita.png" alt="Pianifica Visita" />
+            </a>
+            <a href="@Url.Action("Index", "Stampa", new { area = "Visite" })">
+                <img src="~/images/stampante.png" alt="Stampa" />
+            </a>
+        </div>
+    </div>
+
+    <!-- Tabella -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrata</th>
+                    <th>Uscita</th>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Azienda</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody id="visits-table">
+                <tr id="no-visits-row">
+                    <td colspan="6">Non ci sono visite al momento</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="delete-confirmation-popup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <p>Confermi di voler eliminare definitivamente questa visita?</p>
+            <button id="cancel-delete">Annulla</button>
+            <button id="confirm-delete">Ok</button>
+        </div>
+    </div>
+    <!-- Pop-up per la conferma della sovrascrittura dell'orario di ingresso o d'uscita-->
+    <div id="update-time-popup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <p id="update-time-message"></p>
+            <button id="cancel-update-time">Annulla</button>
+            <button id="confirm-update-time">Ok</button>
+        </div>
+    </div>
+    <!-- Popup per la scelta della data (date picker) -->
+    <div id="date-picker-popup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <p>Seleziona una data</p>
+            <input type="date" id="date-picker-input" />
+            <div>
+                <button id="cancel-date-picker">Annulla</button>
+                <button id="confirm-date-picker">Ok</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            const languageSelector = document.querySelector(".language-selector");
+            const languagePopup = document.getElementById("language-popup");
+            const menuItems = document.querySelectorAll(".popup-menu .menu-item");
+            const helpButton = document.getElementById("help-button");
+            const helpPopup = document.getElementById("help-popup");
+            const dateElement = document.getElementById("current-date").querySelector("a");
+            const prevButton = document.getElementById("prev-day");
+            const nextButton = document.getElementById("next-day");
+            const links = document.querySelectorAll(".navbar a");
+            const currentPath = window.location.href;
+            const visitsTable = document.getElementById("visits-table");
+            const noVisitsRow = document.getElementById("no-visits-row");
+            const deletePopup = document.getElementById("delete-confirmation-popup");
+            const cancelDelete = document.getElementById("cancel-delete");
+            const confirmDelete = document.getElementById("confirm-delete");
+            const savedDate = localStorage.getItem("selectedDate");
+            // Elementi per il date picker
+            const datePickerPopup = document.getElementById("date-picker-popup");
+            const datePickerInput = document.getElementById("date-picker-input");
+            const cancelDatePicker = document.getElementById("cancel-date-picker");
+            const confirmDatePicker = document.getElementById("confirm-date-picker");
+
+            let currentRow = null;
+            let currentIcon = null;
+            let deleteRow = null;
+            let currentDate = savedDate ? new Date(savedDate) : new Date();
+
+            function getTodayDate() {
+                let today = new Date();
+                today.setHours(0, 0, 0, 0);  // Imposta a mezzanotte per confronto corretto
+                return today;
+            }
+
+            function getFormattedDate(date, lang) {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return date.toLocaleDateString(lang, options);
+            }
+
+            function updateDateDisplay(lang = "it-IT") {
+                dateElement.textContent = getFormattedDate(currentDate, lang);
+            }
+
+            // Funzione per aggiornare la data e salvarla nel localStorage
+            function updateCurrentDate(newDate, lang = "it-IT") {
+                currentDate = newDate;
+                // Salva la data in formato ISO (yyyy-mm-ddThh:mm:ss.sssZ)
+                localStorage.setItem("selectedDate", currentDate.toISOString());
+                updateDateDisplay(lang);
+            }
+
+            // Al caricamento, imposta il display della data (e potenzialmente altre operazioni iniziali)
+            updateDateDisplay();
+
+            prevButton.addEventListener("click", async function () {
+                let tempDate = new Date(currentDate);
+                tempDate.setDate(tempDate.getDate() - 1);
+                if (tempDate >= getTodayDate()) {
+                    updateCurrentDate(tempDate, "it-IT");
+                    await refreshIngressi();
+                } else {
+                    alert("Non puoi selezionare una data precedente a quella odierna.");
+                }
+            });
+
+            // Pulsante per giorno successivo
+            nextButton.addEventListener("click", async function () {
+                let tempDate = new Date(currentDate);
+                tempDate.setDate(tempDate.getDate() + 1);
+                updateCurrentDate(tempDate, "it-IT");
+                await refreshIngressi();
+            });
+
+            async function refreshIngressi() {
+                //Svuota la tabella
+                visitsTable.innerHTML = "";
+                //Carica gli ingressi per la nuova data
+                await loadIngressi("IngressoEvent");
+                await loadIngressiAd("IngressoAd");
+                //Se la tabella è vuota, aggiungi la riga "Nessun ingresso"
+                if (visitsTable.rows.length === 0 && noVisitsRow) {
+                    visitsTable.appendChild(noVisitsRow);
+                }
+            }
+
+            updateDateDisplay();
+
+            // Imposta il valore minimo per il date picker (la data odierna)
+            function setDatePickerMin() {
+                const todayISOString = new Date().toISOString().split("T")[0];
+                datePickerInput.setAttribute("min", todayISOString);
+            }
+            setDatePickerMin();
+
+            // Mostra il pop-up per la scelta della data al click della data centrale
+            dateElement.addEventListener("click", function (event) {
+                event.preventDefault();
+                // Imposta il valore corrente nell'input (formato yyyy-mm-dd)
+                datePickerInput.value = currentDate.toISOString().split("T")[0];
+                datePickerPopup.style.display = "flex";
+            });
+
+            cancelDatePicker.addEventListener("click", function () {
+                datePickerPopup.style.display = "none";
+            });
+
+            confirmDatePicker.addEventListener("click", async function () {
+                const selectedDate = new Date(datePickerInput.value);
+                selectedDate.setHours(0, 0, 0, 0);
+                if (selectedDate >= getTodayDate()) {
+                    updateCurrentDate(selectedDate, "it-IT");
+                    await refreshIngressi();
+                    datePickerPopup.style.display = "none";
+                } else {
+                    alert("Non puoi selezionare una data precedente a quella odierna.");
+                }
+            });
+
+            languageSelector.addEventListener("click", function (event) {
+                event.preventDefault();
+                const isVisible = languagePopup.style.display === "block";
+                languagePopup.style.display = isVisible ? "none" : "block";
+                helpPopup.style.display = "none";
+            });
+
+            menuItems.forEach((item) => {
+                item.addEventListener("click", function () {
+                    const selectedLang = this.dataset.lang;
+                    menuItems.forEach((el) => el.classList.remove("selected"));
+                    this.classList.add("selected");
+                    languageSelector.textContent = selectedLang;
+                    updatePageLanguage(selectedLang);
+                    languagePopup.style.display = "none";
+                });
+            });
+
+            helpButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                const isVisible = helpPopup.style.display === "block";
+                helpPopup.style.display = isVisible ? "none" : "block";
+                languagePopup.style.display = "none";
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!languageSelector.contains(event.target) && !languagePopup.contains(event.target)) {
+                    languagePopup.style.display = "none";
+                }
+                if (!helpButton.contains(event.target) && !helpPopup.contains(event.target)) {
+                    helpPopup.style.display = "none";
+                }
+            });
+
+            function updatePageLanguage(lang) {
+                const isEnglish = lang === "ENG";
+                updateDateDisplay(isEnglish ? "en-US" : "it-IT");
+                document.querySelector(".logo").textContent = isEnglish ? "Planner.com" : "Planner.com";
+                document.querySelector(".navbar a:nth-child(2)").textContent = isEnglish ? "Home" : "Home";
+                document.querySelector(".navbar a:nth-child(3)").textContent = isEnglish ? "History" : "Storico";
+                document.querySelector("th:nth-child(1)").textContent = isEnglish ? "Entry" : "Entrata";
+                document.querySelector("th:nth-child(2)").textContent = isEnglish ? "Exit" : "Uscita";
+                document.querySelector("th:nth-child(3)").textContent = isEnglish ? "Name" : "Nome";
+                document.querySelector("th:nth-child(4)").textContent = isEnglish ? "Surname" : "Cognome";
+                document.querySelector("th:nth-child(5)").textContent = isEnglish ? "Company" : "Azienda";
+                document.querySelector("th:nth-child(6)").textContent = isEnglish ? "Actions" : "Azioni";
+            }
+
+            updateDateDisplay();
+
+            links.forEach(link => {
+                if (link.href === currentPath) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+
+            // Configura SignalR
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("/templateHub")
+                .build();
+
+            // Avvia la connessione SignalR
+            await connection.start();
+
+            // Funzione per creare una riga nella tabella
+            function createRow(data, eventType) {
+                const row = document.createElement("tr");
+                row.dataset.eventId = data.id;
+                row.dataset.eventType = eventType; // Aggiunto tipo evento
+                row.innerHTML = `
+                    <td>${data.orarioIngresso}</td>
+                    <td>${data.orarioUscita || "-"}</td>
+                    <td>${data.nome}</td>
+                    <td>${data.cognome}</td>
+                    <td>${data.azienda}</td>
+                    <td class="actions">
+                                <img src="@Url.Content("~/images/cestino.png")" alt="Elimina" class="action-icon" title="Elimina Riga"/>
+                                <img src="@Url.Content("~/images/time-edit.png")" alt="Entrata" class="enter-icon" title="Segna Entrata"/>
+                                <img src="@Url.Content("~/images/exit.png")" alt="Uscita" class="exit-icon" title="Segna Uscita"/>
+                    </td>
+                `;
+                if (noVisitsRow) noVisitsRow.remove();
+                visitsTable.appendChild(row);
+            }
+
+            // Ascolta eventi IngressoEvent
+            connection.on("NewIngresso", function (data) {
+                if (new Date(data.data).setHours(0, 0, 0, 0) === new Date(currentDate).setHours(0, 0, 0, 0)) {
+                    createRow(data, "IngressoEvent");
+                }
+            });
+
+            // Ascolta gli eventi di uscita
+            connection.on("NewUscita", function (data) {
+                const row = document.querySelector(`[data-event-id='${data.id}']`);
+                if (row) {
+                    row.querySelector("td:nth-child(2)").textContent = data.orarioUscita;
+                }
+            });
+
+            // Ascolta eventi IngressoAd
+            connection.on("NewIngressoAd", function (data) {
+                if (new Date(data.data).setHours(0, 0, 0, 0) === new Date(currentDate).setHours(0, 0, 0, 0)) {
+                    createRow(data, "IngressoAd");
+                }
+            });
+
+            async function loadIngressi(eventType) {
+                try {
+                    const response = await fetch("/api/ingressi");
+                    const ingressi = await response.json();
+                    if (ingressi.length > 0) {
+                        if (noVisitsRow) noVisitsRow.remove();
+                        ingressi.forEach(evento => {
+                            const eventoData = new Date(evento.data).setHours(0, 0, 0, 0);
+                            const filtroData = new Date(currentDate).setHours(0, 0, 0, 0);
+                            if (eventoData === filtroData) {  // ✅ Filtra solo eventi con la data corrente
+                                createRow(evento, eventType);
+                            }
+                        });
+                    }
+                } catch (error) {
+                    console.error("Errore nel caricamento degli ingressi:", error);
+                }
+            }
+
+            async function loadIngressiAd(eventType) {
+                try {
+                    const response = await fetch("/api/ingressiAd");
+                    const ingressi = await response.json();
+                    if (ingressi.length > 0) {
+                        if (noVisitsRow) noVisitsRow.remove();
+                        ingressi.forEach(evento => {
+                            const eventoData = new Date(evento.data).setHours(0, 0, 0, 0);
+                            const filtroData = new Date(currentDate).setHours(0, 0, 0, 0);
+                            if (eventoData === filtroData) {  // ✅ Filtra solo eventi con la data corrente
+                                createRow(evento, eventType);
+                            }
+                        });
+                    }
+                } catch (error) {
+                    console.error("Errore nel caricamento degli ingressi Ad:", error);
+                }
+            }
+
+            // Carica gli ingressi all'avvio
+            await loadIngressi("IngressoEvent");
+            await loadIngressiAd("IngressoAd");
+
+            document.addEventListener("click", function (event) {
+                if (event.target.classList.contains("enter-icon") || event.target.classList.contains("exit-icon")) {
+                    currentRow = event.target.closest("tr");
+                    currentIcon = event.target;
+                    const orarioIngresso = currentRow.querySelector("td:nth-child(1)").textContent;
+                    const orarioUscita = currentRow.querySelector("td:nth-child(2)").textContent;
+                    // Verifica se gli orari sono già presenti e non sono "-" o null
+                    if ((currentIcon.classList.contains("enter-icon") && orarioIngresso !== "-" && orarioIngresso !== "") ||
+                        (currentIcon.classList.contains("exit-icon") && orarioUscita !== "-" && orarioUscita !== "")) {
+                        // Mostra il pop-up di conferma
+                        const message = currentIcon.classList.contains("enter-icon") ?
+                            "Vuoi davvero sovrascrivere i dati per l'orario d'ingresso?" :
+                            "Vuoi davvero sovrascrivere i dati per l'orario d'uscita?";
+                        document.getElementById("update-time-message").textContent = message;
+                        document.getElementById("update-time-popup").style.display = "flex";  // Mostra il pop-up
+                    } else {
+                        // Se l'orario è null o "-", aggiorniamo direttamente senza pop-up
+                        updateOrario(currentIcon, currentRow);
+                    }
+                }
+            });
+
+            // Funzione per aggiornare l'orario senza conferma
+            async function updateOrario(icon, row) {
+                const eventType = row.dataset.eventType;
+                const currentTime = new Date().toLocaleTimeString("it-IT", { hour: '2-digit', minute: '2-digit' });
+                let requestBody = {
+                    type: eventType,
+                    orarioUscita: icon.classList.contains("exit-icon") ? currentTime : null,
+                    orarioIngresso: icon.classList.contains("enter-icon") ? currentTime : null
+                };
+                if (eventType === "IngressoEvent") {
+                    requestBody.id = row.dataset.eventId;
+                } else if (eventType === "IngressoAd") {
+                    requestBody.nome = row.querySelector("td:nth-child(3)").textContent;
+                    requestBody.cognome = row.querySelector("td:nth-child(4)").textContent;
+                    requestBody.azienda = row.querySelector("td:nth-child(5)").textContent;
+                }
+                try {
+                    const response = await fetch("/api/ingressi/updateOrario", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(requestBody)
+                    });
+                    if (response.ok) {
+                        location.reload(); // Ricarica la pagina per visualizzare la modifica
+                    } else {
+                        const error = await response.json();
+                        console.error("Errore:", error.message);
+                        alert("Errore nell'aggiornamento dell'orario: " + error.message);
+                    }
+                } catch (error) {
+                    console.error("Errore nella richiesta:", error);
+                    alert("Si è verificato un errore nell'aggiornamento.");
+                }
+            }
+            // Gestisci il click su "Annulla" nel pop-up
+            document.getElementById("cancel-update-time").addEventListener("click", function () {
+                document.getElementById("update-time-popup").style.display = "none";  // Nascondi il pop-up
+                currentRow = null;  // Reset della riga
+                currentIcon = null; // Reset dell'icona
+            });
+            // Gestisci il click su "Ok" nel pop-up
+            document.getElementById("confirm-update-time").addEventListener("click", async function () {
+                if (currentRow && currentIcon) {
+                    await updateOrario(currentIcon, currentRow);  // Chiama la funzione per aggiornare l'orario
+                    document.getElementById("update-time-popup").style.display = "none";  // Nascondi il pop-up
+                }
+            });
+
+            // Nascondi il pop-up se si clicca fuori di esso
+            document.getElementById("update-time-popup").addEventListener("click", function (event) {
+                if (event.target === document.getElementById("update-time-popup")) {
+                    document.getElementById("update-time-popup").style.display = "none";
+                }
+            });
+            // Mostra il pop-up quando si clicca sull'icona del cestino
+            document.addEventListener("click", function (event) {
+                if (event.target.classList.contains("action-icon")) {
+                    deleteRow = event.target.closest("tr");
+                    if (deleteRow) {
+                        deletePopup.style.display = "flex"; // Mostra il pop-up
+                    }
+                }
+            });
+            // Nascondi il pop-up quando si clicca su "Annulla"
+            cancelDelete.addEventListener("click", function () {
+                deletePopup.style.display = "none";
+                deleteRow = null; // Reset della riga selezionata
+            });
+            // Nascondi il pop-up se si clicca fuori da esso
+            deletePopup.addEventListener("click", function (event) {
+                if (event.target === deletePopup) {
+                    deletePopup.style.display = "none";
+                    deleteRow = null;
+                }
+            });
+            // Conferma eliminazione
+            confirmDelete.addEventListener("click", async function () {
+                if (!deleteRow) return;
+                const eventId = deleteRow.dataset.eventId;
+                const eventType = deleteRow.dataset.eventType;
+                let apiUrl = "";
+                let requestOptions = { method: "DELETE" };
+                if (eventType === "IngressoEvent") {
+                    apiUrl = `/api/ingressi/${eventId}`;
+                } else if (eventType === "IngressoAd") {
+                    apiUrl = `/api/ingressiAd/delete`;
+                    requestOptions = {
+                        method: "DELETE",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            nome: deleteRow.querySelector("td:nth-child(3)").textContent,
+                            cognome: deleteRow.querySelector("td:nth-child(4)").textContent,
+                            azienda: deleteRow.querySelector("td:nth-child(5)").textContent
+                        })
+                    };
+                }
+                if (apiUrl) {
+                    try {
+                        const response = await fetch(apiUrl, requestOptions);
+                        if (response.ok) {
+                            deleteRow.remove();
+                            if (visitsTable.rows.length === 0 && noVisitsRow) {
+                                visitsTable.appendChild(noVisitsRow);
+                            }
+                        } else {
+                            const error = await response.json();
+                            alert("Errore durante l'eliminazione: " + error.message);
+                        }
+                    } catch (error) {
+                        alert("Si è verificato un errore durante l'eliminazione.");
+                    }
+                }
+                deletePopup.style.display = "none"; // Chiudi il pop-up dopo l'eliminazione
+                deleteRow = null;
+            });
+        });
+    </script>
+</body>
+</html>

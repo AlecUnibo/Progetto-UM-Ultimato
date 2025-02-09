@@ -1,0 +1,156 @@
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\ale03\source\repos\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\ale03\Source\Repos\Progetto-di-Interfaccia-Uomo-Macchina\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\stass\OneDrive\Desktop\Progetto interafaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\2.0\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\stass\OneDrive\Desktop\Interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\stass\OneDrive\Desktop\Progetto interfaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\Corrente\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\stass\OneDrive\Desktop\ZENO\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\Int\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\Appoggio\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\Luca Zenobi\OneDrive\Desktop\Intrefaccia\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll

@@ -1,0 +1,149 @@
+/* Impostazioni generali per l'intera pagina */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif; /* Font universale */
+}
+
+.Color-main {
+    background-color: #243473;
+}
+
+/* Container principale */
+.full-screen-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #243473;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Titolo */
+.Title-small {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Card che contiene il form */
+.Card-input {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Impostiamo una larghezza massima */
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+/* Titolo del feedback */
+.Feedback-title {
+    color: #243473;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Sezione textarea per il commento */
+.Feedback-form {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+    .Feedback-form textarea {
+        width: 100%;
+        height: 150px; /* Imposta un'altezza fissa */
+        font-size: 1em;
+        border-radius: 8px;
+        border: 1px solid #243473;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+        .Feedback-form textarea::placeholder {
+            color: #aaa;
+        }
+
+/* Messaggio di ringraziamento */
+.Thanks-message {
+    color: #243473;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contenitore delle stelle di valutazione */
+.star-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 3rem;
+    color: #ccc;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+    .star.selected {
+        color: #FFD700;
+    }
+
+/* Pulsante per il check-out */
+.Buttom-input {
+    background-color: #243473;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+    .Buttom-input:hover {
+        background-color: #007bff;
+    }
+
+/* Per il layout responsivo su dispositivi mobili */
+@media (max-width: 768px) {
+    .Title-small {
+        font-size: 2em;
+    }
+
+    .Card-input {
+        padding: 15px;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .Feedback-form textarea {
+        height: 120px; /* Ridurre l'altezza della textarea su mobile */
+    }
+
+    .Thanks-message {
+        font-size: 0.9em;
+    }
+
+    .star-container {
+        font-size: 2rem; /* Ridurre la dimensione delle stelle sui dispositivi mobili */
+    }
+
+    .Buttom-input {
+        padding: 12px 24px; /* Ridurre la dimensione del pulsante su mobile */
+        font-size: 1em;
+    }
+}

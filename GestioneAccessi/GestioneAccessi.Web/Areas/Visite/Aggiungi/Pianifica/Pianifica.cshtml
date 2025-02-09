@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserisci la Visita</title>
+    <link rel="stylesheet" href="~/css/Areas/Visite/Aggiungi/Pianifica/Pianifica.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Pianifica la visita</h1>
+        <form method="post" action="/Visite/Pianifica/PianificaEvento">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cognome">Cognome*</label>
+                    <input type="text" id="cognome" name="cognome" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="azienda">Azienda*</label>
+                <input type="text" id="azienda" name="azienda" required>
+            </div>
+            <div class="form-group">
+                <label for="data">Data*</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+            <div class="form-group">
+                <label for="orario-entrata">Orario entrata</label>
+                <input type="time" id="orario-entrata" name="orarioEntrata">
+            </div>
+            <div class="form-group">
+                <label for="orario-uscita">Orario uscita</label>
+                <input type="time" id="orario-uscita" name="orarioUscita">
+            </div>
+
+            <button type="submit" class="btn">Conferma</button>
+        </form>
+    </div>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let messageBox = document.createElement("div");
+                messageBox.textContent = "@TempData["SuccessMessage"]";
+                messageBox.style.position = "fixed";
+                messageBox.style.top = "10px";
+                messageBox.style.left = "50%";
+                messageBox.style.transform = "translateX(-50%)";
+                messageBox.style.backgroundColor = "#4CAF50";
+                messageBox.style.color = "white";
+                messageBox.style.padding = "15px";
+                messageBox.style.borderRadius = "5px";
+                messageBox.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
+                messageBox.style.zIndex = "1000";
+
+                document.body.appendChild(messageBox);
+
+                setTimeout(() => {
+                    messageBox.style.opacity = "0";
+                    setTimeout(() => messageBox.remove(), 500);
+                }, 2000);
+            });
+        </script>
+    }
+    <script>
+        // Imposta la data odierna nel campo "data"
+        const today = new Date();
+        const formattedDate = today.toISOString().split('T')[0]; // Formatta la data in "YYYY-MM-DD"
+        document.getElementById('data').value = formattedDate;
+    </script>
+</body>
+</html>

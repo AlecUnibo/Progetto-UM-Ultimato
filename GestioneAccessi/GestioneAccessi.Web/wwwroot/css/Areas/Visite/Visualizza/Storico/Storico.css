@@ -1,0 +1,349 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+/*-----------------------------------------------------------------------------------------Barra di navigazione-----------------------------------------------------------------------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c3a8e;
+    color: white;
+    padding: 10px 20px;
+}
+
+    .navbar .left-section, .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+        .navbar .left-section .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+    .navbar a {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        background-color: white;
+        color: #1c3a8e;
+        border-radius: 15%;
+        border-color: #1c3a8e;
+        padding: 5px 10px;
+        font-size: 1em;
+        text-decoration: none; /* Rimuove la sottolineatura */
+    }
+
+        .navbar a img.icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+/*-----------------------------------------------------------------------------------------Stile del menu pop-up per lingua-----------------------------------------------------------------------------------------*/
+.popup-menu {
+    display: none; /* Nascosto di default */
+    position: absolute; /* Posizionato rispetto al suo elemento contenitore */
+    top: 35px;
+    right: 100px; /* Allinea il popup a destra (o usa left se preferisci) */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100; /* Assicura che il menu sia sopra gli altri elementi */
+    margin-top: 5px; /* Spazio sotto il pulsante */
+    width: 100px; /* Larghezza del menu */
+}
+
+    .popup-menu .menu-item {
+        padding: 5px 10px;
+        color: #1c3a8e;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+        .popup-menu .menu-item:hover {
+            background-color: #dfe4f5; /* Sfondo al passaggio del mouse */
+        }
+
+        .popup-menu .menu-item.selected {
+            text-decoration: underline;
+            color: #1c3a8e; /* Colore coerente con il tema */
+            font-weight: bold; /* Opzionale, per evidenziare ulteriormente */
+        }
+
+        .popup-menu .menu-item img.export-icon {
+            width: 40px;
+            height: 40px;
+            margin: 5px 0;
+        }
+
+/*-----------------------------------------------------------------------------------------Stile del menu pop-up per il "?"----------------------------------------------------------------------------------------------*/
+#help-popup {
+    display: none; /* Nascosto di default */
+    position: absolute; /* Posizionato rispetto al contenitore .navbar .right-section */
+    top: 35px; /* Imposta la distanza dal bordo superiore del contenitore; modifica questo valore a tuo piacimento */
+    right: 0; /* Allinea il popup a destra (o usa left se preferisci) */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100; /* Assicura che il menu sia sopra gli altri elementi */
+    width: 150px;
+}
+
+    #help-popup .menu-item {
+        padding: 5px 10px;
+        color: #1c3a8e;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+        #help-popup .menu-item:hover {
+            background-color: #dfe4f5;
+        }
+
+/*-----------------------------------------------------------------------------------------Allineamento del menu rispetto al pulsante-----------------------------------------------------------------------------------------*/
+.language-selector {
+    position: relative;
+    cursor: pointer;
+}
+/*-----------------------------------------------------------------------------------------Sezione filtri-----------------------------------------------------------------------------------------*/
+.filters-container {
+    background-color: #dfe4f5;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Righe */
+.search-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/*-----------------------------------------------------------------------------------------Gruppo singolo di label e input-----------------------------------------------------------------------------------------*/
+.search-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/*-----------------------------------------------------------------------------------------Contenitore principale dei pulsanti-----------------------------------------------------------------------------------------*/
+.search-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #dfe4f5;
+}
+
+/*-----------------------------------------------------------------------------------------Pulsante di ricerca-----------------------------------------------------------------------------------------*/
+.search-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .search-buttons img.icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+button {
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+    button:hover {
+        background-color: #0033aa;
+    }
+
+/*---------------------------------------------------------------------------------------Pulsanti laterali----------------------------------------------------------------------------------------*/
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spazio tra i pulsanti */
+}
+
+.img-link {
+    display: inline-flex; /* Per mantenere le immagini centrate */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Mostra il cursore come un bottone */
+}
+
+    .img-link img {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        border-radius: 10%;
+        transition: transform 0.2s ease;
+    }
+
+
+    .img-link:hover img {
+        transform: scale(1.1);
+        border-color: #1c3a8e;
+    }
+
+/*-----------------------------------------------------------------------------------------Pop-up per il pulsante Stampa e Esportazione-----------------------------------------------------------------------------------------*/
+.settings-popup {
+    display: none; 
+    position: absolute; 
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100; /* Assicura che il menu sia sopra gli altri elementi */
+    margin-top: 5px; 
+    width: 150px; 
+}
+
+.settings-popup .menu-item {
+    padding: 8px 10px; 
+    color: #1c3a8e; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.settings-popup .menu-item:hover {
+    background-color: #dfe4f5; 
+}
+
+/* Posizionamento rispetto al pulsante */
+.settings-button {
+    position: relative; 
+}
+
+/*-----------------------------------------------------------------------------------------Tabella-----------------------------------------------------------------------------------------*/
+.table-container {
+    margin: 20px auto;
+    width: 90%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #1c3a8e;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/*MODIFICA DA QUIIII*/
+/*-----------------------------------------------------------------------------------------Stile del menu pop-up per cestino-----------------------------------------------------------------------------------------*/
+.popup-overlay {
+    display: none; /* Inizialmente nascosto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+    .popup-content button {
+        margin: 10px;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+#cancel-delete {
+    background-color: gray;
+    color: white;
+}
+
+#confirm-delete {
+    background-color: red;
+    color: white;
+}
+
+/* Stile per l'immagine del cestino */
+.action-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+    .action-icon:hover {
+        filter: brightness(0.8);
+        background-color: #d3d3d3; /* Sfondo grigio chiaro */
+        border-radius: 5px;
+    }
+
+@keyframes blink {
+    50% {
+        background-color: #ffd700;
+    }
+}
+/*A QUIIIIII*/
