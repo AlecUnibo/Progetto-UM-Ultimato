@@ -58,14 +58,14 @@ img {
     margin-bottom: 1.5vh;
 }
 
-.followus {
+.follow-us {
     color: white;
     text-align: center;
     width: 100%;
     margin-top: 1vh; /* Leggermente ridotto per migliorare il bilanciamento */
 }
 
-    .followus h3 {
+    .follow-us h3 {
         font-size: clamp(1rem, 1.8vw, 1.2rem);
         margin-bottom: 1vh;
         color: white; /* Impostato il colore bianco */

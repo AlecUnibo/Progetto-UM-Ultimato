@@ -12,26 +12,26 @@
     <div class="navbar">
         <div class="left-section">
             <div class="logo">Planner.com</div>
-            <a href="#" class="active">
+            <a href="#" class="active" title="Pagina Home" data-title-key="homeTitle">
                 <img src="~/images/home.png" alt="Home Icon" class="icon">
                 Home
             </a>
-            <a href="@Url.Action("Index", "Storico", new { area = "Visite" })">
-                <img src="~/images/Calendario.png" alt="Storico Icon" class="icon">
-                Storico
+            <a href="@Url.Action("Index", "Storico", new { area = "Visite" })" title="Pagina Storico" data-title-key="historyTitle">
+                <img src="~/images/Calendario.png" alt="Storico Icon" class="icon" title="Pagina Storico" data-title-key="historyTitle">
+                <span class="translate" data-key="history">Storico</span>
             </a>
         </div>
         <div class="right-section">
-            <a href="#" class="language-selector">IT</a>
+            <a href="#" class="language-selector" title="Selettore Lingua" data-title-key="languageSelector">IT</a>
             <div class="popup-menu" id="language-popup">
                 <div class="menu-item" data-lang="ENG">ENG</div>
                 <div class="menu-item selected" data-lang="IT">IT</div>
             </div>
-            <a href="#" id="help-button">?</a>
+            <a href="#" id="help-button" title="Aiuto" data-title-key="helpTitle">?</a>
             <div class="popup-menu" id="help-popup">
-                <div class="menu-item">Versione</div>
-                <div class="menu-item">Manuale</div>
-                <div class="menu-item">Assistenza</div>
+                <div class="menu-item" data-key="version">Versione</div>
+                <div class="menu-item" data-key="manual">Manuale</div>
+                <div class="menu-item" data-key="assistance">Assistenza</div>
             </div>
             <div>VEM</div>
         </div>
@@ -40,22 +40,22 @@
     <!-- Sezione data -->
     <div class="date-section">
         <div class="date-buttons">
-            <button id="prev-day">&lt;</button>
+            <button id="prev-day" title="Indietro" data-title-key="prevTitle">&lt;</button>
             <div class="date" id="current-date">
                 <a href="#"></a>
             </div>
-            <button id="next-day">&gt;</button>
+            <button id="next-day" title="Avanti" data-title-key="nextTitle">&gt;</button>
         </div>
 
         <div class="date-buttons">
             <a href="@Url.Action("Index", "Giornaliera", new { area = "visite" })">
-                <img src="~/images/aggiungi_giornaliera.png" alt="Aggiungi Giornaliera" />
+                <img src="~/images/aggiungi_giornaliera.png" alt="Aggiungi Giornaliera" title="Aggiungi visita giornaliera" data-title-key="addTitle" />
             </a>
             <a href="@Url.Action("Index", "Pianifica", new { area = "Visite" })">
-                <img src="~/images/pianifica_visita.png" alt="Pianifica Visita" />
+                <img src="~/images/pianifica_visita.png" alt="Pianifica Visita" title="Pianifica visita futura" data-title-key="planTitle" />
             </a>
             <a href="@Url.Action("Index", "Stampa", new { area = "Visite" })">
-                <img src="~/images/stampante.png" alt="Stampa" />
+                <img src="~/images/stampante.png" alt="Stampa" title="Stampa documento" data-title-key="printTitle" />
             </a>
         </div>
     </div>
@@ -65,48 +65,124 @@
         <table>
             <thead>
                 <tr>
-                    <th>Entrata</th>
-                    <th>Uscita</th>
-                    <th>Nome</th>
-                    <th>Cognome</th>
-                    <th>Azienda</th>
-                    <th>Azioni</th>
+                    <th data-key="entry">Entrata</th>
+                    <th data-key="exit">Uscita</th>
+                    <th data-key="name">Nome</th>
+                    <th data-key="surname">Cognome</th>
+                    <th data-key="company">Azienda</th>
+                    <th data-key="actions">Azioni</th>
                 </tr>
             </thead>
             <tbody id="visits-table">
                 <tr id="no-visits-row">
-                    <td colspan="6">Non ci sono visite al momento</td>
+                    <td colspan="6" data-key="novisits">Non ci sono visite al momento</td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div id="delete-confirmation-popup" class="popup-overlay" style="display: none;">
         <div class="popup-content">
-            <p>Confermi di voler eliminare definitivamente questa visita?</p>
-            <button id="cancel-delete">Annulla</button>
-            <button id="confirm-delete">Ok</button>
+            <p data-key="ConfirmDelete">Confermi di voler eliminare definitivamente questa visita?</p>
+            <button id="cancel-delete" data-key="cancelRow">Annulla</button>
+            <button id="confirm-delete" data-key="OkRow">Ok</button>
         </div>
     </div>
+
     <!-- Pop-up per la conferma della sovrascrittura dell'orario di ingresso o d'uscita-->
     <div id="update-time-popup" class="popup-overlay" style="display: none;">
         <div class="popup-content">
             <p id="update-time-message"></p>
-            <button id="cancel-update-time">Annulla</button>
-            <button id="confirm-update-time">Ok</button>
+            <button id="cancel-update-time" data-key="cancelUpdate">Annulla</button>
+            <button id="confirm-update-time" data-key="OkUpdate">Ok</button>
         </div>
     </div>
-    <!-- Popup per la scelta della data (date picker) -->
+
+    <!-- Popup per la scelta della data -->
     <div id="date-picker-popup" class="popup-overlay" style="display: none;">
         <div class="popup-content">
-            <p>Seleziona una data</p>
+            <p data-key="select">Seleziona una data</p>
             <input type="date" id="date-picker-input" />
             <div>
-                <button id="cancel-date-picker">Annulla</button>
-                <button id="confirm-date-picker">Ok</button>
+                <button id="cancel-date-picker" data-key="cancelDate">Annulla</button>
+                <button id="confirm-date-picker" data-key="OkDate">Ok</button>
             </div>
         </div>
     </div>
     <script>
+        const translations = {
+            ENG: {
+                home: "Home",
+                homeTitle: "Home Page",
+                history: "History",
+                historyTitle: "History Page",
+                languageSelector: "Language Selector",
+                helpTitle: "Help",
+                version: "Version",
+                manual: "Manual",
+                assistance: "Assistance",
+                prevTitle: "Previous",
+                nextTitle: "Next",
+                addTitle: "Add daily visit",
+                planTitle: "Plan future visit",
+                printTitle: "Print Document",
+                entry: "Entry",
+                exit: "Exit",
+                name: "Name",
+                surname: "Surname",
+                company: "Company",
+                actions: "Actions",
+                deleteRow: "Delete Row",
+                setEntry: "Set Entry Time",
+                setExit: "Set Exit Time",
+                novisits: "There're no visits at the moment",
+                ConfirmDelete: "Are you sure you want to permanently delete this visit?",
+                cancelRow: "Cancel",
+                OkRow: "Ok",
+                cancelUpdate: "Cancel",
+                OkUpdate: "Ok",
+                overwriteEntryMessage: "Do you really want to overwrite the entry time?",
+                overwriteExitMessage: "Do you really want to overwrite the exit time?",
+                cancelDate: "Cancel",
+                OkDate: "Ok",
+                select: "Select a date"
+            },
+            IT: {
+                home: "Home",
+                homeTitle: "Pagina Home",
+                history: "Storico",
+                historyTitle: "Pagina Storico",
+                languageSelector: "Selettore Lingua",
+                helpTitle: "Aiuto",
+                version: "Versione",
+                manual: "Manuale",
+                assistance: "Assistenza",
+                prevTitle: "Indietro",
+                nextTitle: "Avanti",
+                addTitle: "Aggiungi visita giornaliera",
+                planTitle: "Pianifica visita futura",
+                printTitle: "Stampa documento",
+                entry: "Entrata",
+                exit: "Uscita",
+                name: "Nome",
+                surname: "Cognome",
+                company: "Azienda",
+                actions: "Azioni",
+                deleteRow: "Cancella Riga",
+                setEntry: "Segna Orario Entrata",
+                setExit: "Segna Orario Uscita",
+                novisits: "Non ci sono visite al momento",
+                ConfirmDelete: "Confermi di voler eliminare definitivamente questa visita?",
+                cancelRow: "Annulla",
+                OkRow: "Ok",
+                cancelUpdate: "Annulla",
+                OkUpdate: "Ok",
+                overwriteEntryMessage: "Vuoi davvero sovrascrivere i dati per l'orario d'ingresso?",
+                overwriteExitMessage: "Vuoi davvero sovrascrivere i dati per l'orario d'uscita?",
+                cancelDate: "Annulla",
+                OkDate: "Ok",
+                select: "Seleziona una data"
+            }
+        };
         document.addEventListener("DOMContentLoaded", async function () {
             const languageSelector = document.querySelector(".language-selector");
             const languagePopup = document.getElementById("language-popup");
@@ -124,6 +200,7 @@
             const cancelDelete = document.getElementById("cancel-delete");
             const confirmDelete = document.getElementById("confirm-delete");
             const savedDate = localStorage.getItem("selectedDate");
+            const savedLanguage = localStorage.getItem("selectedLanguage") || "IT";
             // Elementi per il date picker
             const datePickerPopup = document.getElementById("date-picker-popup");
             const datePickerInput = document.getElementById("date-picker-input");
@@ -133,7 +210,13 @@
             let currentRow = null;
             let currentIcon = null;
             let deleteRow = null;
-            let currentDate = savedDate ? new Date(savedDate) : new Date();
+            let currentDate = new Date();
+            let currentLanguage = "IT"; 
+            currentLanguage = savedLanguage;
+
+            languageSelector.textContent = savedLanguage;
+
+            updatePageLanguage(savedLanguage);
 
             function getTodayDate() {
                 let today = new Date();
@@ -153,8 +236,6 @@
             // Funzione per aggiornare la data e salvarla nel localStorage
             function updateCurrentDate(newDate, lang = "it-IT") {
                 currentDate = newDate;
-                // Salva la data in formato ISO (yyyy-mm-ddThh:mm:ss.sssZ)
-                localStorage.setItem("selectedDate", currentDate.toISOString());
                 updateDateDisplay(lang);
             }
 
@@ -235,9 +316,14 @@
             menuItems.forEach((item) => {
                 item.addEventListener("click", function () {
                     const selectedLang = this.dataset.lang;
+
                     menuItems.forEach((el) => el.classList.remove("selected"));
                     this.classList.add("selected");
+
                     languageSelector.textContent = selectedLang;
+
+                    localStorage.setItem("selectedLanguage", selectedLang);
+
                     updatePageLanguage(selectedLang);
                     languagePopup.style.display = "none";
                 });
@@ -260,17 +346,17 @@
             });
 
             function updatePageLanguage(lang) {
-                const isEnglish = lang === "ENG";
-                updateDateDisplay(isEnglish ? "en-US" : "it-IT");
-                document.querySelector(".logo").textContent = isEnglish ? "Planner.com" : "Planner.com";
-                document.querySelector(".navbar a:nth-child(2)").textContent = isEnglish ? "Home" : "Home";
-                document.querySelector(".navbar a:nth-child(3)").textContent = isEnglish ? "History" : "Storico";
-                document.querySelector("th:nth-child(1)").textContent = isEnglish ? "Entry" : "Entrata";
-                document.querySelector("th:nth-child(2)").textContent = isEnglish ? "Exit" : "Uscita";
-                document.querySelector("th:nth-child(3)").textContent = isEnglish ? "Name" : "Nome";
-                document.querySelector("th:nth-child(4)").textContent = isEnglish ? "Surname" : "Cognome";
-                document.querySelector("th:nth-child(5)").textContent = isEnglish ? "Company" : "Azienda";
-                document.querySelector("th:nth-child(6)").textContent = isEnglish ? "Actions" : "Azioni";
+                currentLanguage = lang;
+                const texts = translations[lang];
+                document.querySelectorAll("[data-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-key");
+                    element.textContent = texts[key] || element.textContent;
+                });
+                // Aggiorna anche gli attributi title se necessario, ad esempio:
+                document.querySelectorAll("[data-title-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-title-key");
+                    element.title = texts[key] || element.title;
+                });
             }
 
             updateDateDisplay();
@@ -302,10 +388,12 @@
                     <td>${data.nome}</td>
                     <td>${data.cognome}</td>
                     <td>${data.azienda}</td>
-                    <td class="actions">
+                    <td>
+                          <div class="actions">
                                 <img src="@Url.Content("~/images/cestino.png")" alt="Elimina" class="action-icon" title="Elimina Riga"/>
                                 <img src="@Url.Content("~/images/time-edit.png")" alt="Entrata" class="enter-icon" title="Segna Entrata"/>
                                 <img src="@Url.Content("~/images/exit.png")" alt="Uscita" class="exit-icon" title="Segna Uscita"/>
+                          </div>
                     </td>
                 `;
                 if (noVisitsRow) noVisitsRow.remove();
@@ -376,19 +464,24 @@
             await loadIngressi("IngressoEvent");
             await loadIngressiAd("IngressoAd");
 
+
+            //---------------------------------------------------sovrascrittura dell'orario-----------------------------------------------------------------------
             document.addEventListener("click", function (event) {
                 if (event.target.classList.contains("enter-icon") || event.target.classList.contains("exit-icon")) {
                     currentRow = event.target.closest("tr");
                     currentIcon = event.target;
                     const orarioIngresso = currentRow.querySelector("td:nth-child(1)").textContent;
                     const orarioUscita = currentRow.querySelector("td:nth-child(2)").textContent;
+
                     // Verifica se gli orari sono già presenti e non sono "-" o null
                     if ((currentIcon.classList.contains("enter-icon") && orarioIngresso !== "-" && orarioIngresso !== "") ||
                         (currentIcon.classList.contains("exit-icon") && orarioUscita !== "-" && orarioUscita !== "")) {
+
                         // Mostra il pop-up di conferma
                         const message = currentIcon.classList.contains("enter-icon") ?
-                            "Vuoi davvero sovrascrivere i dati per l'orario d'ingresso?" :
-                            "Vuoi davvero sovrascrivere i dati per l'orario d'uscita?";
+                            translations[currentLanguage].overwriteEntryMessage :
+                            translations[currentLanguage].overwriteExitMessage;
+
                         document.getElementById("update-time-message").textContent = message;
                         document.getElementById("update-time-popup").style.display = "flex";  // Mostra il pop-up
                     } else {

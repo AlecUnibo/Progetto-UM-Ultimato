@@ -52,7 +52,7 @@ namespace GestioneAccessi.Web.Areas.Visite.Controllers
             _repository.Add(nuovoEvento);
             await _publisher.Publish(nuovoEvento); // Pubblica il nuovo evento
 
-            TempData["SuccessMessage"] = "Ingresso registrato con successo!";
+            TempData["SuccessMessage"] = "successMessage";
 
             return RedirectToAction(nameof(Index));
         }

@@ -7,149 +7,156 @@
     <link rel="stylesheet" href="~/css/Areas/Visite/Visualizza/Storico/Storico.css" />
 </head>
 <body>
-    <!-- Barra di navigazione -->
-    <div class="navbar">
-        <div class="left-section">
-            <div class="logo">Planner.com</div>
-            <a href="@Url.Action("Index", "Home", new { area = "Features" })">
-                <img src="~/images/home.png" alt="Home Icon" class="icon">
-                Home
-            </a>
-            <a href="#">
-                <img src="~/images/Calendario.png" alt="Storico Icon" class="icon">
-                <span class="translate" data-key="history">Storico</span>
-            </a>
-        </div>
-        <div class="right-section">
-            <a href="#" class="language-selector">IT</a>
-            <div class="popup-menu" id="language-popup">
-                <div class="menu-item" data-lang="ENG">ENG</div>
-                <div class="menu-item selected" data-lang="IT">IT</div>
-            </div>
-            <a href="#" id="help-button">?</a>
-            <div class="popup-menu" id="help-popup">
-                <div class="menu-item" data-key="version">Versione</div>
-                <div class="menu-item" data-key="manual">Manuale</div>
-                <div class="menu-item" data-key="assistance">Assistenza</div>
-            </div>
-            <div>VEM</div>
-        </div>
-    </div>
-
-    <!-- Sezione filtri-->
-    <div class="filters-container">
-        <div class="search-section">
-            <!-- Prima riga -->
-            <div class="search-row">
-                <div class="search-group">
-                    <label for="data" class="translate" data-key="date">Data</label>
-                    <input type="text" id="data" placeholder="YYYY-MM-DD">
-                </div>
-                <div class="search-group">
-                    <label for="entrata" class="translate" data-key="entry">Entrata</label>
-                    <input type="time" id="entrata" placeholder="HH/MM">
-                </div>
-                <div class="search-group">
-                    <label for="uscita" class="translate" data-key="exit">Uscita</label>
-                    <input type="time" id="uscita" placeholder="HH/MM">
-                </div>
-            </div>
-
-            <!-- Seconda riga -->
-            <div class="search-row">
-                <div class="search-group">
-                    <label for="nome" class="translate" data-key="name">Nome</label>
-                    <input type="text" id="nome">
-                </div>
-                <div class="search-group">
-                    <label for="cognome" class="translate" data-key="surname">Cognome</label>
-                    <input type="text" id="cognome">
-                </div>
-                <div class="search-group">
-                    <label for="azienda" class="translate" data-key="company">Azienda</label>
-                    <input type="text" id="azienda">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sezione Pulsanti -->
-
-    <div class="search-buttons-container">
-        <!-- Pulsante di ricerca -->
-        <div class="search-buttons">
-            <button id="search-button">
-                <img src="~/images/search.png" alt="Search Icon" class="icon">
-                <span class="translate" data-key="search">Cerca</span>
-            </button>
-        </div>
-
-        <!-- Tasti laterali -->
-        <div class="button-container">
-            <div class="img-link" id="settings-button">
-                <img src="~/images/EsportaFile.png" alt="Impostazioni">
-            </div>
-            <div class="popup-menu" id="settings-popup">
-                <a>Esporta come:</a>
-                <div class="menu-item">
-                    <img src="~/images/pdf.png" alt="Esporta PDF" class="export-icon">
-                </div>
-                <div class="menu-item">
-                    <img src="~/images/word.png" alt="Esporta Word" class="export-icon">
-                </div>
-                <div class="menu-item">
-                    <img src="~/images/excel.png" alt="Esporta Excel" class="export-icon">
-                </div>
-                <div class="menu-item">
-                    <img src="~/images/csv.png" alt="Esporta CSV" class="export-icon">
-                </div>
-                <div class="menu-item">
-                    <img src="~/images/txt.png" alt="Esporta txt" class="export-icon">
-                </div>
-            </div>
-            <div class="button-container">
-                <a class="img-link" id="print-button">
-                    <img src="~/images/stampante.png" alt="Stampa">
+        <!-- Barra di navigazione -->
+        <div class="navbar">
+            <div class="left-section">
+                <div class="logo">Planner.com</div>
+                <a href="@Url.Action("Index", "Home", new { area = "Features" })" title="Pagina Home" data-title-key="homeTitle">
+                    <img src="~/images/home.png" alt="Home Icon" class="icon" title="Pagina Home" data-title-key="homeTitle">
+                    Home
+                </a>
+                <a href="#" title="Pagina Storico" data-title-key="historyTitle">
+                    <img src="~/images/Calendario.png" alt="Storico Icon" class="icon">
+                    <span class="translate" data-key="history">Storico</span>
                 </a>
             </div>
+            <div class="right-section">
+                <a href="#" class="language-selector" title="Selettore Lingua" data-title-key="languageSelector">IT</a>
+                <div class="popup-menu" id="language-popup">
+                    <div class="menu-item" data-lang="ENG">ENG</div>
+                    <div class="menu-item selected" data-lang="IT">IT</div>
+                </div>
+                <a href="#" id="help-button" title="Aiuto" data-title-key="helpTitle">?</a>
+                <div class="popup-menu" id="help-popup">
+                    <div class="menu-item" data-key="version">Versione</div>
+                    <div class="menu-item" data-key="manual">Manuale</div>
+                    <div class="menu-item" data-key="assistance">Assistenza</div>
+                </div>
+                <div>VEM</div>
+            </div>
+        </div>
 
+        <!-- Sezione filtri-->
+        <div class="filters-container">
+            <div class="search-section">
+                <!-- Prima riga -->
+                <div class="search-row">
+                    <div class="search-group">
+                        <label for="data" class="translate" data-key="date">Data</label>
+                        <input type="text" id="data" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="search-group">
+                        <label for="entrata" class="translate" data-key="entry">Entrata</label>
+                        <input type="time" id="entrata" placeholder="HH/MM">
+                    </div>
+                    <div class="search-group">
+                        <label for="uscita" class="translate" data-key="exit">Uscita</label>
+                        <input type="time" id="uscita" placeholder="HH/MM">
+                    </div>
+                </div>
+
+                <!-- Seconda riga -->
+                <div class="search-row">
+                    <div class="search-group">
+                        <label for="nome" class="translate" data-key="name">Nome</label>
+                        <input type="text" id="nome">
+                    </div>
+                    <div class="search-group">
+                        <label for="cognome" class="translate" data-key="surname">Cognome</label>
+                        <input type="text" id="cognome">
+                    </div>
+                    <div class="search-group">
+                        <label for="azienda" class="translate" data-key="company">Azienda</label>
+                        <input type="text" id="azienda">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-   <!--MODIFICA DA QUIII--> 
-    <!-- Tabella -->
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th data-key="date">Data</th>
-                    <th data-key="entry">Entrata</th>
-                    <th data-key="exit">Uscita</th>
-                    <th data-key="name">Nome</th>
-                    <th data-key="surname">Cognome</th>
-                    <th data-key="company">Azienda</th>
-                    <th data-key="actions">Azioni</th>
-                </tr>
-            </thead>
-            <tbody id="visits-table">
-                <tr id="no-visits-row">
-                    <td colspan="7">Non ci sono visite al momento</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div id="delete-confirmation-popup" class="popup-overlay" style="display: none;">
-        <div class="popup-content">
-            <p>Confermi di voler eliminare definitivamente questa visita?</p>
-            <button id="cancel-delete">Annulla</button>
-            <button id="confirm-delete">Ok</button>
+
+        <!-- Sezione Pulsanti -->
+
+        <div class="search-buttons-container">
+            <!-- Pulsante di ricerca -->
+            <div class="search-buttons">
+                <button id="search-button">
+                    <img src="~/images/search.png" alt="Search Icon" class="icon" title="Search">
+                    <span class="translate" data-key="search" data-title-key="searchTitle">Cerca</span>
+                </button>
+            </div>
+
+            <!-- Tasti laterali -->
+            <div class="button-container">
+                <div class="img-link" id="settings-button">
+                    <img src="~/images/EsportaFile.png" alt="Impostazioni" title="Esporta documento" data-title-key="exportTitle">
+                </div>
+                <div class="popup-menu" id="settings-popup">
+                    <a data-key="export">Esporta come:</a>
+                    <div class="menu-item">
+                        <img src="~/images/pdf.png" alt="Esporta PDF" class="export-icon" title="PDF">
+                    </div>
+                    <div class="menu-item">
+                        <img src="~/images/word.png" alt="Esporta Word" class="export-icon" title="Word">
+                    </div>
+                    <div class="menu-item">
+                        <img src="~/images/excel.png" alt="Esporta Excel" class="export-icon" title="Excel">
+                    </div>
+                    <div class="menu-item">
+                        <img src="~/images/csv.png" alt="Esporta CSV" class="export-icon" title=".csv">
+                    </div>
+                    <div class="menu-item">
+                        <img src="~/images/txt.png" alt="Esporta txt" class="export-icon" title=".txt">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <a class="img-link" id="print-button">
+                        <img src="~/images/stampante.png" alt="Stampa" title="Stampa documento" data-title-key="printTitle">
+                    </a>
+                </div>
+
+            </div>
         </div>
-    </div>
-    <!--A QUIII-->
+        <!--MODIFICA DA QUIII-->
+        <!-- Tabella -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th data-key="date">Data</th>
+                        <th data-key="entry">Entrata</th>
+                        <th data-key="exit">Uscita</th>
+                        <th data-key="name">Nome</th>
+                        <th data-key="surname">Cognome</th>
+                        <th data-key="company">Azienda</th>
+                        <th data-key="actions">Azioni</th>
+                    </tr>
+                </thead>
+                <tbody id="visits-table">
+                    <tr id="no-visits-row">
+                        <td colspan="7" data-key="novisits">Non ci sono visite al momento</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="delete-confirmation-popup" class="popup-overlay" style="display: none;">
+            <div class="popup-content">
+                <p data-key="ConfirmDelete">Confermi di voler eliminare definitivamente questa visita?</p>
+                <button id="cancel-delete" data-key="cancel">Annulla</button>
+                <button id="confirm-delete">Ok</button>
+            </div>
+        </div>
+        <!--A QUIII-->
     <script>
         const translations = {
             ENG: {
                 home: "Home",
+                homeTitle: "Home Page",
                 history: "History",
+                historyTitle: "History Page",
+                languageSelector: "Language Selector",
+                helpTitle: "Help",
+                version: "Version",
+                manual: "Manual",
+                assistance: "Assistance",
                 date: "Date",
                 entry: "Entry",
                 exit: "Exit",
@@ -157,14 +164,24 @@
                 surname: "Surname",
                 company: "Company",
                 search: "Search",
+                searchTitle: "Search",
+                exportTitle: "Export",
+                printTitle: "Print File",
                 actions: "Actions",
-                version: "Version",
-                manual: "Manual",
-                assistance: "Assistance",
+                novisits: "There're no visits at the moment",
+                ConfirmDelete: "Are you sure you want to permanently delete this visit?",
+                cancel: "Cancel",
             },
             IT: {
                 home: "Home",
+                homeTitle: "Pagina Home",
                 history: "Storico",
+                historyTitle: "Pagina Storico",
+                languageSelector: "Selettore Lingua",
+                helpTitle: "Aiuto",
+                version: "Versione",
+                manual: "Manuale",
+                assistance: "Assistenza",
                 date: "Data",
                 entry: "Entrata",
                 exit: "Uscita",
@@ -172,10 +189,13 @@
                 surname: "Cognome",
                 company: "Azienda",
                 search: "Cerca",
+                searchTitle: "Cerca",
+                exportTitle: "Esporta",
+                printTitle: "Stampa File",
                 actions: "Azioni",
-                version: "Versione",
-                manual: "Manuale",
-                assistance: "Assistenza",
+                novisits: "Non ci sono visite al momento",
+                ConfirmDelete: "Confermi di voler eliminare definitivamente questa visita?",
+                cancel: "Annulla",
             }
         };
         document.addEventListener("DOMContentLoaded", function () {
@@ -186,16 +206,27 @@
             const helpPopup = document.getElementById("help-popup");
             const settingsButton = document.getElementById("settings-button");
             const settingsPopup = document.getElementById("settings-popup");
+            const savedLanguage = localStorage.getItem("selectedLanguage") || "IT";
             //MODIFICATO DA QUII
             const visitsTable = document.getElementById("visits-table");
             const noVisitsRow = document.getElementById("no-visits-row");
             const deletePopup = document.getElementById("delete-confirmation-popup");
             const cancelDelete = document.getElementById("cancel-delete");
             const confirmDelete = document.getElementById("confirm-delete");
+
             
+
             loadIngressi();
             loadIngressiAd();
             let deleteRow = null;
+            let currentLanguage = "IT";
+            
+            currentLanguage = savedLanguage;
+
+            updatePageLanguage(savedLanguage);
+
+            languageSelector.textContent = savedLanguage;
+
 
             document.getElementById("search-button").addEventListener("click", function () {
                 console.log("Pulsante Cerca cliccato!");
@@ -249,6 +280,8 @@
 
                     languageSelector.textContent = selectedLang;
 
+                    localStorage.setItem("selectedLanguage", selectedLang);
+
                     updatePageLanguage(selectedLang);
                     languagePopup.style.display = "none";
                 });
@@ -271,10 +304,16 @@
             });
 
             function updatePageLanguage(lang) {
+                currentLanguage = lang;
                 const texts = translations[lang];
                 document.querySelectorAll("[data-key]").forEach(function (element) {
                     const key = element.getAttribute("data-key");
                     element.textContent = texts[key] || element.textContent;
+                });
+                // Aggiorna anche gli attributi title se necessario, ad esempio:
+                document.querySelectorAll("[data-title-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-title-key");
+                    element.title = texts[key] || element.title;
                 });
             }
 

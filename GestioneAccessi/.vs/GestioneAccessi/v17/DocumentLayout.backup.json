@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\",
+  "WorkspaceRootPath": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\luca zenobi\\onedrive\\desktop\\interfaccia\\gestioneaccessi\\gestioneaccessi.web\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um\\gestioneaccessi\\gestioneaccessi.web\\wwwroot\\css\\areas\\visite\\aggiungi\\giornaliera\\giornaliera.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\wwwroot\\css\\areas\\visite\\aggiungi\\giornaliera\\giornaliera.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\luca zenobi\\onedrive\\desktop\\interfaccia\\gestioneaccessi\\gestioneaccessi.web\\areas\\visite\\aggiungi\\giornaliera\\giornaliera.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um\\gestioneaccessi\\gestioneaccessi.web\\areas\\visite\\aggiungi\\giornaliera\\giornaliera.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\areas\\visite\\aggiungi\\giornaliera\\giornaliera.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\luca zenobi\\onedrive\\desktop\\interfaccia\\gestioneaccessi\\gestioneaccessi.web\\areas\\visite\\aggiungi\\giornaliera\\giornalieracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\areas\\visite\\aggiungi\\giornaliera\\giornalieracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um\\gestioneaccessi\\gestioneaccessi.web\\wwwroot\\css\\areas\\visite\\aggiungi\\pianifica\\pianifica.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\wwwroot\\css\\areas\\visite\\aggiungi\\pianifica\\pianifica.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\luca zenobi\\onedrive\\desktop\\interfaccia\\gestioneaccessi\\gestioneaccessi.web\\areas\\visite\\aggiungi\\pianifica\\pianifica.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um\\gestioneaccessi\\gestioneaccessi.web\\areas\\visite\\aggiungi\\pianifica\\pianifica.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\areas\\visite\\aggiungi\\pianifica\\pianifica.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\luca zenobi\\onedrive\\desktop\\interfaccia\\gestioneaccessi\\gestioneaccessi.web\\areas\\visite\\aggiungi\\pianifica\\pianificacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um\\gestioneaccessi\\gestioneaccessi.web\\areas\\visite\\aggiungi\\pianifica\\pianificacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\areas\\visite\\aggiungi\\pianifica\\pianificacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um\\gestioneaccessi\\gestioneaccessi.web\\areas\\visite\\aggiungi\\giornaliera\\giornalieracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\areas\\visite\\aggiungi\\giornaliera\\giornalieracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,63 +42,102 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pianifica.css",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.css",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.css",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.css",
+              "RelativeToolTip": "GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.css",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-09T21:57:10.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "PianificaController.cs",
-              "DocumentMoniker": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\PianificaController.cs",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\PianificaController.cs",
               "RelativeDocumentMoniker": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\PianificaController.cs",
-              "ToolTip": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\PianificaController.cs",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\PianificaController.cs",
               "RelativeToolTip": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\PianificaController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T15:25:25.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pianifica.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.cshtml",
-              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.cshtml",
-              "ToolTip": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.cshtml",
-              "RelativeToolTip": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-08T15:25:24.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GiornalieraController.cs",
-              "DocumentMoniker": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\GiornalieraController.cs",
-              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\GiornalieraController.cs",
-              "ToolTip": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\GiornalieraController.cs",
-              "RelativeToolTip": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\GiornalieraController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T15:25:24.373Z"
+              "WhenOpened": "2025-02-09T22:13:38.715Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Giornaliera.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.cshtml",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.cshtml",
               "RelativeDocumentMoniker": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.cshtml",
-              "ToolTip": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.cshtml",
-              "RelativeToolTip": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.cshtml*",
+              "RelativeToolTip": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.cshtml*",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAuwGQAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-08T15:25:19.72Z"
+              "WhenOpened": "2025-02-09T21:29:14.648Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Startup.cs",
-              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Startup.cs",
-              "ToolTip": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Startup.cs",
-              "RelativeToolTip": "GestioneAccessi.Web\\Startup.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Title": "Giornaliera.css",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.css",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.css",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.css*",
+              "RelativeToolTip": "GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Aggiungi\\Giornaliera\\Giornaliera.css*",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAJAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-09T21:57:10.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GiornalieraController.cs",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\GiornalieraController.cs",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\GiornalieraController.cs",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\GiornalieraController.cs",
+              "RelativeToolTip": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Giornaliera\\GiornalieraController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T15:19:18.4Z"
+              "WhenOpened": "2025-02-09T21:57:28.967Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "e06c5982-3a6c-4d2c-bd52-e5f3941eb05c",
+        "Display": 1,
+        "X": 1,
+        "Y": 1,
+        "Width": 1279,
+        "Height": 671,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pianifica.cshtml",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.cshtml",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.cshtml",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM\\GestioneAccessi\\GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.cshtml",
+              "RelativeToolTip": "GestioneAccessi.Web\\Areas\\Visite\\Aggiungi\\Pianifica\\Pianifica.cshtml",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAUwF4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-09T21:47:16.091Z",
+              "EditorCaption": ""
             }
           ]
         }

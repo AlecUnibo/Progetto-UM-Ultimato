@@ -9,53 +9,90 @@
 <body>
     <div class="form-container">
         <h1>Pianifica la visita</h1>
+        <div class="language-container">
+            <a href="#" class="language-selector" title="Selettore Lingua" data-title-key="languageSelector">IT</a>
+            <div class="popup-menu" id="language-popup">
+                <div class="menu-item" data-lang="ENG">ENG</div>
+                <div class="menu-item selected" data-lang="IT">IT</div>
+            </div>
+        </div>
         <form method="post" action="/Visite/Pianifica/PianificaEvento">
             <div class="form-row">
                 <div class="form-group">
-                    <label for="nome">Nome*</label>
+                    <label for="nome" data-key="name">Nome*</label>
                     <input type="text" id="nome" name="nome" required>
                 </div>
                 <div class="form-group">
-                    <label for="cognome">Cognome*</label>
+                    <label for="cognome" data-key="surname">Cognome*</label>
                     <input type="text" id="cognome" name="cognome" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="azienda">Azienda*</label>
+                <label for="azienda" data-key="company">Azienda*</label>
                 <input type="text" id="azienda" name="azienda" required>
             </div>
             <div class="form-group">
-                <label for="data">Data*</label>
+                <label for="data" data-key="date">Data*</label>
                 <input type="date" id="data" name="data" required>
             </div>
             <div class="form-group">
-                <label for="orario-entrata">Orario entrata</label>
+                <label for="orario-entrata" data-key="entryTime">Orario entrata</label>
                 <input type="time" id="orario-entrata" name="orarioEntrata">
             </div>
             <div class="form-group">
-                <label for="orario-uscita">Orario uscita</label>
+                <label for="orario-uscita" data-key="exitTime">Orario uscita</label>
                 <input type="time" id="orario-uscita" name="orarioUscita">
             </div>
 
-            <button type="submit" class="btn">Conferma</button>
+            <button type="submit" class="btn" data-key="confirm">Conferma</button>
         </form>
     </div>
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+   <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Definizione delle traduzioni
+            const translations = {
+                ENG: {
+                    languageSelector: "Language Selector",
+                    plan: "Schedule a visit",
+                    name: "Name*",
+                    surname: "Surname*",
+                    company: "Company*",
+                    date: "Date",
+                    entryTime: "Entry Time",
+                    exitTime: "Exit Time",
+                    confirm: "Confirm",
+                    successMessage: "Successfully registered!"
+                },
+                IT: {
+                    languageSelector: "Selettore Lingua",
+                    insert: "Pianifica una visita",
+                    name: "Nome*",
+                    surname: "Cognome*",
+                    company: "Azienda",
+                    date: "Data*",
+                    entryTime: "Orario Entrata",
+                    exitTime: "Orario Uscita",
+                    confirm: "Conferma",
+                    successMessage: "Ingresso registrato con successo!"
+                }
+            };
+
+            // Imposta la data odierna nel campo "data"
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0];
+            document.getElementById('data').value = formattedDate;
+
+            // Gestione del messaggio di successo tradotto
+            const successMessageKey = "@(TempData["SuccessMessage"] ?? "")";
+            if (successMessageKey) {
+                // Recupera la lingua attuale dal localStorage, default IT
+                const currentLang = localStorage.getItem("selectedLanguage") || "IT";
+                // Ottieni il testo tradotto tramite la chiave; se non esiste, usa la chiave stessa
+                const messageText = translations[currentLang]["successMessage"] || successMessageKey;
+
                 let messageBox = document.createElement("div");
-                messageBox.textContent = "@TempData["SuccessMessage"]";
-                messageBox.style.position = "fixed";
-                messageBox.style.top = "10px";
-                messageBox.style.left = "50%";
-                messageBox.style.transform = "translateX(-50%)";
-                messageBox.style.backgroundColor = "#4CAF50";
-                messageBox.style.color = "white";
-                messageBox.style.padding = "15px";
-                messageBox.style.borderRadius = "5px";
-                messageBox.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
-                messageBox.style.zIndex = "1000";
+                messageBox.textContent = messageText;
+                messageBox.classList.add("message-box");
 
                 document.body.appendChild(messageBox);
 
@@ -63,14 +100,64 @@
                     messageBox.style.opacity = "0";
                     setTimeout(() => messageBox.remove(), 500);
                 }, 2000);
+            }
+
+            // Configurazione del selettore di lingua
+            const languageSelector = document.querySelector(".language-selector");
+            const languagePopup = document.getElementById("language-popup");
+            const menuItems = document.querySelectorAll(".popup-menu .menu-item");
+            const savedLang = localStorage.getItem("selectedLanguage") || "IT";
+
+            // Aggiorna la pagina con la lingua salvata
+            updatePageLanguage(savedLang);
+            languageSelector.textContent = savedLang;
+            languagePopup.style.display = "none";
+
+            // Gestione del click sul selettore di lingua
+            languageSelector.addEventListener("click", function (event) {
+                event.preventDefault();
+                const isVisible = languagePopup.style.display === "block";
+                languagePopup.style.display = isVisible ? "none" : "block";
             });
-        </script>
-    }
-    <script>
-        // Imposta la data odierna nel campo "data"
-        const today = new Date();
-        const formattedDate = today.toISOString().split('T')[0]; // Formatta la data in "YYYY-MM-DD"
-        document.getElementById('data').value = formattedDate;
+
+            // Gestione della scelta della lingua
+            menuItems.forEach((item) => {
+                item.addEventListener("click", function () {
+                    const selectedLang = this.dataset.lang;
+                    menuItems.forEach((el) => el.classList.remove("selected"));
+                    this.classList.add("selected");
+                    languageSelector.textContent = selectedLang;
+                    updatePageLanguage(selectedLang);
+                    languagePopup.style.display = "none";
+                });
+            });
+
+            // Chiude il popup se si clicca fuori dal selettore o dal popup
+            document.addEventListener("click", function (event) {
+                if (!languageSelector.contains(event.target) && !languagePopup.contains(event.target)) {
+                    languagePopup.style.display = "none";
+                }
+            });
+
+            // Funzione per aggiornare i testi della pagina in base alla lingua selezionata
+            function updatePageLanguage(lang) {
+                const texts = translations[lang] || {};
+                document.querySelectorAll("[data-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-key");
+                    if (texts[key]) {
+                        element.textContent = texts[key];
+                    }
+                });
+                document.querySelectorAll("[data-title-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-title-key");
+                    if (texts[key]) {
+                        element.title = texts[key];
+                    }
+                });
+
+                localStorage.setItem("selectedLanguage", lang);
+            }
+        });
     </script>
 </body>
 </html>
