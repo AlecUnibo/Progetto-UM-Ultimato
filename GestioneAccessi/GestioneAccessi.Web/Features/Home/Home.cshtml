@@ -92,8 +92,8 @@
     <div id="update-time-popup" class="popup-overlay" style="display: none;">
         <div class="popup-content">
             <p id="update-time-message"></p>
-            <button id="cancel-update-time" data-key="cancelUpdate">Annulla</button>
-            <button id="confirm-update-time" data-key="OkUpdate">Ok</button>
+            <button id="cancel-update-time" data-key="cancelUpdate" class="popup-Annulla">Annulla</button>
+            <button id="confirm-update-time" data-key="OkUpdate" class="popup-Ok">Ok</button>
         </div>
     </div>
 
@@ -103,8 +103,8 @@
             <p data-key="select">Seleziona una data</p>
             <input type="date" id="date-picker-input" />
             <div>
-                <button id="cancel-date-picker" data-key="cancelDate">Annulla</button>
-                <button id="confirm-date-picker" data-key="OkDate">Ok</button>
+                <button id="cancel-date-picker" data-key="cancelDate" class="popup-Annulla">Annulla</button>
+                <button id="confirm-date-picker" data-key="OkDate" class="popup-Ok">Ok</button>
             </div>
         </div>
     </div>
@@ -426,15 +426,16 @@
                 try {
                     const response = await fetch("/api/ingressi");
                     const ingressi = await response.json();
-                    if (ingressi.length > 0) {
+                    const filtroData = new Date(currentDate).setHours(0, 0, 0, 0);
+                    const ingressiFiltrati = ingressi.filter(evento => {
+                        const eventoData = new Date(evento.data).setHours(0, 0, 0, 0);
+                        return eventoData === filtroData;
+                    });
+                    if (ingressiFiltrati.length > 0) {
                         if (noVisitsRow) noVisitsRow.remove();
-                        ingressi.forEach(evento => {
-                            const eventoData = new Date(evento.data).setHours(0, 0, 0, 0);
-                            const filtroData = new Date(currentDate).setHours(0, 0, 0, 0);
-                            if (eventoData === filtroData) {  // ✅ Filtra solo eventi con la data corrente
-                                createRow(evento, eventType);
-                            }
-                        });
+                        ingressiFiltrati.forEach(evento => createRow(evento, eventType));
+                    } else {
+                        document.getElementById("table-body").appendChild(noVisitsRow);
                     }
                 } catch (error) {
                     console.error("Errore nel caricamento degli ingressi:", error);
@@ -445,15 +446,16 @@
                 try {
                     const response = await fetch("/api/ingressiAd");
                     const ingressi = await response.json();
-                    if (ingressi.length > 0) {
+                    const filtroData = new Date(currentDate).setHours(0, 0, 0, 0);
+                    const ingressiFiltrati = ingressi.filter(evento => {
+                        const eventoData = new Date(evento.data).setHours(0, 0, 0, 0);
+                        return eventoData === filtroData;
+                    });
+                    if (ingressiFiltrati.length > 0) {
                         if (noVisitsRow) noVisitsRow.remove();
-                        ingressi.forEach(evento => {
-                            const eventoData = new Date(evento.data).setHours(0, 0, 0, 0);
-                            const filtroData = new Date(currentDate).setHours(0, 0, 0, 0);
-                            if (eventoData === filtroData) {  // ✅ Filtra solo eventi con la data corrente
-                                createRow(evento, eventType);
-                            }
-                        });
+                        ingressiFiltrati.forEach(evento => createRow(evento, eventType));
+                    } else {
+                        document.getElementById("table-body").appendChild(noVisitsRow);
                     }
                 } catch (error) {
                     console.error("Errore nel caricamento degli ingressi Ad:", error);

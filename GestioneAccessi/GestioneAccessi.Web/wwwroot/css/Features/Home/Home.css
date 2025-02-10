@@ -144,8 +144,8 @@
         cursor: pointer;
     }
 
-#cancel-delete {
-    background-color: gray;
+#cancel-delete{
+    background-color: dimgray;
     color: white;
 }
 
@@ -154,6 +154,15 @@
     color: white;
 }
 
+.popup-Ok {
+    background-color: green;
+    color: white;
+}
+
+.popup-Annulla {
+    background-color: dimgray;
+    color: white;
+}
 /*-----------------------------------------------------------------------------------------Sezione data-----------------------------------------------------------------------------------------*/
 .date-section {
     display: flex;

@@ -317,7 +317,7 @@ tr:nth-child(even) {
     }
 
 #cancel-delete {
-    background-color: gray;
+    background-color: dimgrey;
     color: white;
 }
 
