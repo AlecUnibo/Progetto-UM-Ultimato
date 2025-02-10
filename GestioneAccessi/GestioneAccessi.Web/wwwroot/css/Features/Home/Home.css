@@ -27,6 +27,7 @@
     font-weight: bold;
 }
 
+
 .navbar a {
     display: flex;
     align-items: center; 
@@ -37,8 +38,18 @@
     border-color: #1c3a8e;
     padding: 5px 10px;
     font-size: 1em;
-    text-decoration: none; /* Rimuove la sottolineatura */
+    text-decoration: none;
 }
+
+#home-link {
+    background-color: burlywood; 
+    color: #1c3a8e; 
+    border: 1px solid #ffd700;
+}
+
+    #home-link:hover {
+        background-color: antiquewhite;
+    }
 
 .navbar a img.icon {
     width: 20px; 

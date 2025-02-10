@@ -37,9 +37,18 @@
         border-color: #1c3a8e;
         padding: 5px 10px;
         font-size: 1em;
-        text-decoration: none; /* Rimuove la sottolineatura */
+        text-decoration: none; 
     }
 
+#storico-link {
+    background-color: burlywood; 
+    color: #1c3a8e; 
+    border: 1px solid #ffd700;
+}
+
+    #storico-link:hover {
+        background-color: antiquewhite;
+    }
         .navbar a img.icon {
             width: 20px;
             height: 20px;
@@ -229,32 +238,32 @@ button {
 
 /*-----------------------------------------------------------------------------------------Pop-up per il pulsante Stampa e Esportazione-----------------------------------------------------------------------------------------*/
 .settings-popup {
-    display: none; 
-    position: absolute; 
+    display: none;
+    position: absolute;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
     z-index: 100; /* Assicura che il menu sia sopra gli altri elementi */
-    margin-top: 5px; 
-    width: 150px; 
+    margin-top: 5px;
+    width: 150px;
 }
 
-.settings-popup .menu-item {
-    padding: 8px 10px; 
-    color: #1c3a8e; 
-    cursor: pointer;
-    font-weight: bold;
-}
+    .settings-popup .menu-item {
+        padding: 8px 10px;
+        color: #1c3a8e;
+        cursor: pointer;
+        font-weight: bold;
+    }
 
-.settings-popup .menu-item:hover {
-    background-color: #dfe4f5; 
-}
+        .settings-popup .menu-item:hover {
+            background-color: #dfe4f5;
+        }
 
 /* Posizionamento rispetto al pulsante */
 .settings-button {
-    position: relative; 
+    position: relative;
 }
 
 /*-----------------------------------------------------------------------------------------Tabella-----------------------------------------------------------------------------------------*/

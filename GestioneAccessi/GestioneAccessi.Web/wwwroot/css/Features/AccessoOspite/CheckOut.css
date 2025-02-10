@@ -8,10 +8,59 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; /* Evita lo scrolling */
-    font-size: 16px; /* Testo scalabile in base alla larghezza dello schermo */
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.language-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
+.language-selector {
+    display: inline-block;
+    background-color: white;
+    color: #2d4b99;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .language-selector:hover {
+        background-color: antiquewhite;
+    }
+
+.popup-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    z-index: 100;
+}
+
+    .popup-menu .menu-item {
+        padding: 5px 10px;
+        font-weight: bold;
+        color: #1c3a8e;
+        cursor: pointer;
+    }
+
+        .popup-menu .menu-item:hover {
+            background-color: #dfe4f5;
+        }
+
+        .popup-menu .menu-item.selected {
+            text-decoration: underline;
+        }
 .full-screen-container {
     height: 100vh; /* Occupa sempre tutta l'altezza della finestra */
     width: 100%;

@@ -11,11 +11,11 @@
         <div class="navbar">
             <div class="left-section">
                 <div class="logo">Planner.com</div>
-                <a href="@Url.Action("Index", "Home", new { area = "Features" })" title="Pagina Home" data-title-key="homeTitle">
+            <a href="@Url.Action("Index", "Home", new { area = "Features" })" class="@(ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "active" : "")" title="Pagina Home" data-title-key="homeTitle">
                     <img src="~/images/home.png" alt="Home Icon" class="icon" title="Pagina Home" data-title-key="homeTitle">
                     Home
                 </a>
-                <a href="#" title="Pagina Storico" data-title-key="historyTitle">
+            <a id="storico-link" href="@Url.Action("Index", "Storico", new { area = "Visite" })" class="@(ViewContext.RouteData.Values["controller"].ToString() == "Storico" ? "active" : "")" title="Pagina Storico" data-title-key="historyTitle">
                     <img src="~/images/Calendario.png" alt="Storico Icon" class="icon">
                     <span class="translate" data-key="history">Storico</span>
                 </a>
@@ -207,6 +207,8 @@
             const settingsButton = document.getElementById("settings-button");
             const settingsPopup = document.getElementById("settings-popup");
             const savedLanguage = localStorage.getItem("selectedLanguage") || "IT";
+            const currentPath = window.location.pathname.toLowerCase();
+            const navLinks = document.querySelectorAll(".navbar a");
             //MODIFICATO DA QUII
             const visitsTable = document.getElementById("visits-table");
             const noVisitsRow = document.getElementById("no-visits-row");
@@ -330,6 +332,17 @@
                     settingsPopup.style.display = "none";
                 }
             });
+
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute("href").toLowerCase();
+                // Se il percorso corrente contiene il linkHref, aggiunge la classe active
+                if (currentPath.indexOf(linkHref) !== -1) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+
             //MODIFICA DA QUIIIII
             function loadIngressi() {
                 fetch('/api/ingressi')

@@ -1,18 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\",
+  "WorkspaceRootPath": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\luca zenobi\\onedrive\\desktop\\interfaccia\\gestioneaccessi\\gestioneaccessi.web\\features\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\features\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um ultimato\\gestioneaccessi\\gestioneaccessi.web\\features\\accessoospite\\uscita.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\features\\accessoospite\\uscita.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\luca zenobi\\onedrive\\desktop\\interfaccia\\gestioneaccessi\\gestioneaccessi.web\\wwwroot\\css\\features\\home\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\wwwroot\\css\\features\\home\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um ultimato\\gestioneaccessi\\gestioneaccessi.web\\wwwroot\\css\\features\\accessoospite\\uscita.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\wwwroot\\css\\features\\accessoospite\\uscita.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\luca zenobi\\onedrive\\desktop\\interfaccia\\gestioneaccessi\\gestioneaccessi.web\\wwwroot\\css\\areas\\visite\\visualizza\\storico\\storico.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\wwwroot\\css\\areas\\visite\\visualizza\\storico\\storico.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um ultimato\\gestioneaccessi\\gestioneaccessi.web\\wwwroot\\css\\features\\accessoospite\\checkin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\wwwroot\\css\\features\\accessoospite\\checkin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um ultimato\\gestioneaccessi\\gestioneaccessi.web\\features\\accessoospite\\checkin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\features\\accessoospite\\checkin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um ultimato\\gestioneaccessi\\gestioneaccessi.web\\features\\accessoospite\\ingresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\features\\accessoospite\\ingresso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um ultimato\\gestioneaccessi\\gestioneaccessi.web\\wwwroot\\css\\features\\accessoospite\\checkout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\wwwroot\\css\\features\\accessoospite\\checkout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um ultimato\\gestioneaccessi\\gestioneaccessi.web\\wwwroot\\css\\features\\accessoospite\\ingresso.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\wwwroot\\css\\features\\accessoospite\\ingresso.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|c:\\users\\ale03\\onedrive\\desktop\\progetto um ultimato\\gestioneaccessi\\gestioneaccessi.web\\features\\accessoospite\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1B2409C-D8D2-459B-9B3A-BF560D9D38A8}|GestioneAccessi.Web\\GestioneAccessi.Web.csproj|solutionrelative:gestioneaccessi.web\\features\\accessoospite\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,49 +42,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Uscita.cshtml",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\Features\\AccessoOspite\\Uscita.cshtml",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Features\\AccessoOspite\\Uscita.cshtml",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\Features\\AccessoOspite\\Uscita.cshtml",
+              "RelativeToolTip": "GestioneAccessi.Web\\Features\\AccessoOspite\\Uscita.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAUwKkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T20:16:34.361Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Uscita.css",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\Uscita.css",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\Uscita.css",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\Uscita.css",
+              "RelativeToolTip": "GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\Uscita.css",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwDwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-10T20:16:31.39Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Storico.css",
-              "DocumentMoniker": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Visualizza\\Storico\\Storico.css",
-              "RelativeDocumentMoniker": "GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Visualizza\\Storico\\Storico.css",
-              "ToolTip": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Visualizza\\Storico\\Storico.css",
-              "RelativeToolTip": "GestioneAccessi.Web\\wwwroot\\css\\Areas\\Visite\\Visualizza\\Storico\\Storico.css",
-              "ViewState": "AgIAACYBAAAAAAAAAAAAAD8BAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-10T10:08:58.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Home.css",
-              "DocumentMoniker": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\Home\\Home.css",
-              "RelativeDocumentMoniker": "GestioneAccessi.Web\\wwwroot\\css\\Features\\Home\\Home.css",
-              "ToolTip": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\Home\\Home.css",
-              "RelativeToolTip": "GestioneAccessi.Web\\wwwroot\\css\\Features\\Home\\Home.css",
-              "ViewState": "AgIAABEBAAAAAAAAAAAAABEBAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-10T09:56:48.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Features\\Home\\Home.cshtml",
-              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Features\\Home\\Home.cshtml",
-              "ToolTip": "C:\\Users\\Luca Zenobi\\OneDrive\\Desktop\\Interfaccia\\GestioneAccessi\\GestioneAccessi.Web\\Features\\Home\\Home.cshtml",
-              "RelativeToolTip": "GestioneAccessi.Web\\Features\\Home\\Home.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAASwGwAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CheckIn.cshtml",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\Features\\AccessoOspite\\CheckIn.cshtml",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Features\\AccessoOspite\\CheckIn.cshtml",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\Features\\AccessoOspite\\CheckIn.cshtml",
+              "RelativeToolTip": "GestioneAccessi.Web\\Features\\AccessoOspite\\CheckIn.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHMAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T09:49:38.529Z",
+              "WhenOpened": "2025-02-10T19:54:37.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CheckIn.css",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\CheckIn.css",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\CheckIn.css",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\CheckIn.css",
+              "RelativeToolTip": "GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\CheckIn.css",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAD0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-10T19:54:34.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CheckOut.cshtml",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\Features\\AccessoOspite\\CheckOut.cshtml",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Features\\AccessoOspite\\CheckOut.cshtml",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\Features\\AccessoOspite\\CheckOut.cshtml",
+              "RelativeToolTip": "GestioneAccessi.Web\\Features\\AccessoOspite\\CheckOut.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T19:54:56.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CheckOut.css",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\CheckOut.css",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\CheckOut.css",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\CheckOut.css",
+              "RelativeToolTip": "GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\CheckOut.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-10T19:56:10.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Ingresso.cshtml",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\Features\\AccessoOspite\\Ingresso.cshtml",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\Features\\AccessoOspite\\Ingresso.cshtml",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\Features\\AccessoOspite\\Ingresso.cshtml",
+              "RelativeToolTip": "GestioneAccessi.Web\\Features\\AccessoOspite\\Ingresso.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T19:23:25.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Ingresso.css",
+              "DocumentMoniker": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\Ingresso.css",
+              "RelativeDocumentMoniker": "GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\Ingresso.css",
+              "ToolTip": "C:\\Users\\ale03\\OneDrive\\Desktop\\Progetto UM Ultimato\\GestioneAccessi\\GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\Ingresso.css",
+              "RelativeToolTip": "GestioneAccessi.Web\\wwwroot\\css\\Features\\AccessoOspite\\Ingresso.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-10T19:31:53.437Z",
               "EditorCaption": ""
             }
           ]

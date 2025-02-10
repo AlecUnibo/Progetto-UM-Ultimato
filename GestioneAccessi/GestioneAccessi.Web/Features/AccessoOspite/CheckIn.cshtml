@@ -10,16 +10,23 @@
     <link rel="stylesheet" href="~/css/Features/AccessoOspite/CheckIn.css" />
 </head>
 <body class="Color-main">
+    <div class="language-container">
+        <a href="#" class="language-selector" title="Selettore Lingua" data-title-key="languageSelector">IT</a>
+        <div class="popup-menu" id="language-popup">
+            <div class="menu-item selected" data-lang="IT">IT</div>
+            <div class="menu-item" data-lang="ENG">ENG</div>
+        </div>
+    </div>
     <div class="full-screen-container">
 
         <h1 class="Title-small">Planner.com</h1>
 
         <img src="~/images/Check-in.png" alt="Check-in completato" />
         <div class="Card-confirmation">
-            <h2>Check-in avvenuto con successo</h2>
+            <h2 data-key="checkIn">Check-in avvenuto con successo</h2>
         </div>
         <div class="thanks-message">
-            <p>Grazie per la visita! 😄<br />Per procedere con il checkout scansiona di nuovo lo stesso QR code. A presto!</p>
+            <p data-key="message">Grazie per la visita! 😄<br />Per procedere con il checkout scansiona di nuovo lo stesso QR code. A presto!</p>
         </div>
 
     <!-- Follow Us Section -->
@@ -34,5 +41,79 @@
         </div>
         </div>
         </div>
+
+    <script>
+        // Definizione delle traduzioni per la pagina Check-in
+        const translations = {
+            ENG: {
+                checkIn: "Check-in successfully completed",
+                message: "Thank you for your visit! 😄<br />To proceed with checkout, please scan the same QR code again. See you soon!",
+                followUs: "Follow us"
+            },
+            IT: {
+                checkIn: "Check-in avvenuto con successo",
+                message: "Grazie per la visita! 😄<br />Per procedere con il checkout scansiona di nuovo lo stesso QR code. A presto!",
+                followUs: "Seguici"
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const languageSelector = document.querySelector(".language-selector");
+            const languagePopup = document.getElementById("language-popup");
+            const menuItems = document.querySelectorAll(".popup-menu .menu-item");
+
+            // Recupera la lingua salvata (se presente) oppure usa "IT" di default
+            const savedLang = localStorage.getItem("selectedLanguage") || "IT";
+            updatePageLanguage(savedLang);
+            languageSelector.textContent = savedLang;
+
+            languagePopup.style.display = "none";
+
+            // Gestione del click sul selettore: mostra/nasconde il popup
+            languageSelector.addEventListener("click", function (event) {
+                event.preventDefault();
+                languagePopup.style.display = languagePopup.style.display === "block" ? "none" : "block";
+            });
+
+            // Gestione della selezione della lingua dal menu
+            menuItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    const selectedLang = this.dataset.lang;
+
+                    // Rimuove la classe "selected" da tutti e la aggiunge all'elemento cliccato
+                    menuItems.forEach(el => el.classList.remove("selected"));
+                    this.classList.add("selected");
+
+                    languageSelector.textContent = selectedLang;
+                    updatePageLanguage(selectedLang);
+                    localStorage.setItem("selectedLanguage", selectedLang);
+
+                    // Nasconde il popup dopo un breve ritardo
+                    setTimeout(() => {
+                        languagePopup.style.display = "none";
+                    }, 200);
+                });
+            });
+
+            // Nasconde il popup se si clicca fuori dal selettore e dal popup
+            document.addEventListener("click", function (event) {
+                if (!languageSelector.contains(event.target) && !languagePopup.contains(event.target)) {
+                    languagePopup.style.display = "none";
+                }
+            });
+
+            // Funzione per aggiornare i testi della pagina in base alla lingua scelta
+            function updatePageLanguage(lang) {
+                const texts = translations[lang] || {};
+                // Usa innerHTML per gestire eventuali tag HTML (ad es. <br />)
+                document.querySelectorAll("[data-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-key");
+                    if (texts[key]) {
+                        element.innerHTML = texts[key];
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

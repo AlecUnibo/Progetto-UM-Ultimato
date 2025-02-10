@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="~/css/Features/AccessoOspite/Uscita.css" />
 </head>
 <body class="Color-main">
-
+    <div class="language-container">
+        <a href="#" class="language-selector" title="Selettore Lingua" data-title-key="languageSelector">IT</a>
+        <div class="popup-menu" id="language-popup">
+            <div class="menu-item selected" data-lang="IT">IT</div>
+            <div class="menu-item" data-lang="ENG">ENG</div>
+        </div>
+    </div>
     <div class="full-screen-container">
 
         <h1 class="Title-small">Planner.com</h1>
@@ -19,7 +25,7 @@
         <div class="Card-input">
 
             <div class="Feedback-title">
-                <h2>Lascia un feedback</h2>
+                <h2 data-key="feed">Lascia un feedback</h2>
             </div>
 
             <!-- Sezione stelle di valutazione -->
@@ -33,18 +39,18 @@
 
             <!-- Form di feedback -->
             <div class="Feedback-form">
-                <textarea placeholder="Aggiungi un commento..."></textarea>
+                <textarea data-placeholder-key ="commento" placeholder="Aggiungi un commento..."></textarea>
             </div>
 
             <!-- Messaggio di ringraziamento -->
-            <div class="Thanks-message">
+            <div class="Thanks-message" data-key="message">
                 Grazie per aver condiviso la tua esperienza. Ogni recensione ci aiuta a migliorare e offrire un servizio migliore.
             </div>
 
             <!-- Pulsante che invia una richiesta POST al metodo UscitaPost del controller -->
             <div class="button-wrapper" style="margin-left: auto; margin-right: auto;">
                 <form method="post" action="/AccessoOspite/UscitaPost">
-                    <button type="submit" class="Buttom-input">
+                    <button type="submit" class="Buttom-input" data-key="checkOut">
                         Effettua il check-out
                     </button>
                 </form>
@@ -66,6 +72,99 @@
                 for (let i = 0; i <= index; i++) {
                     stars[i].classList.add('selected');
                 }
+            });
+        });
+    </script>
+    <script>
+        const translations = {
+            ENG: {
+                feed: "Leave a feedback",
+                message: "Thanks for sharing your experience. Every review helps us improve and offer a better service.",
+                checkOut: "Check out",
+                commento: "Add a comment..."
+            },
+            IT: {
+                feed: "Lascia un feedback",
+                message: "Grazie per aver condiviso la tua esperienza. Ogni recensione ci aiuta a migliorare e offrire un servizio migliore.",
+                checkOut: "Effettua il Check out",
+                commento: "Aggiungi un commento..."
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const languageSelector = document.querySelector(".language-selector");
+            const languagePopup = document.getElementById("language-popup");
+            const menuItems = document.querySelectorAll(".popup-menu .menu-item");
+            const stars = document.querySelectorAll('.star');
+
+            // Recupera la lingua salvata (se presente) oppure usa "IT" di default
+            const savedLang = localStorage.getItem("selectedLanguage") || "IT";
+            updatePageLanguage(savedLang);
+            languageSelector.textContent = savedLang;
+
+            languagePopup.style.display = "none";
+
+            // Gestione del click sul selettore: mostra/nasconde il popup
+            languageSelector.addEventListener("click", function (event) {
+                event.preventDefault();
+                languagePopup.style.display = languagePopup.style.display === "block" ? "none" : "block";
+            });
+
+            // Gestione della selezione della lingua dal menu
+            menuItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    const selectedLang = this.dataset.lang;
+
+                    // Rimuove la classe "selected" da tutti e la aggiunge all'elemento cliccato
+                    menuItems.forEach(el => el.classList.remove("selected"));
+                    this.classList.add("selected");
+
+                    languageSelector.textContent = selectedLang;
+                    updatePageLanguage(selectedLang);
+                    localStorage.setItem("selectedLanguage", selectedLang);
+
+                    // Nasconde il popup dopo un breve ritardo
+                    setTimeout(() => {
+                        languagePopup.style.display = "none";
+                    }, 200);
+                });
+            });
+
+            // Nasconde il popup se si clicca fuori dal selettore e dal popup
+            document.addEventListener("click", function (event) {
+                if (!languageSelector.contains(event.target) && !languagePopup.contains(event.target)) {
+                    languagePopup.style.display = "none";
+                }
+            });
+
+            // Funzione per aggiornare i testi della pagina in base alla lingua scelta
+            function updatePageLanguage(lang) {
+                const texts = translations[lang] || {};
+                // Usa innerHTML per gestire eventuali tag HTML (ad es. <br />)
+                document.querySelectorAll("[data-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-key");
+                    if (texts[key]) {
+                        element.innerHTML = texts[key];
+                    }
+                });
+                document.querySelectorAll("[data-placeholder-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-placeholder-key");
+                    if (texts[key]) {
+                        element.setAttribute("placeholder", texts[key]);
+                    }
+                });
+            }
+
+            // Gestione delle stelle (se presente)
+            stars.forEach((star, index) => {
+                star.addEventListener('click', function () {
+                    // Rimuove la classe "selected" da tutte le stelle
+                    stars.forEach(s => s.classList.remove('selected'));
+                    // Aggiunge la classe "selected" alle stelle fino a quella cliccata
+                    for (let i = 0; i <= index; i++) {
+                        stars[i].classList.add('selected');
+                    }
+                });
             });
         });
     </script>

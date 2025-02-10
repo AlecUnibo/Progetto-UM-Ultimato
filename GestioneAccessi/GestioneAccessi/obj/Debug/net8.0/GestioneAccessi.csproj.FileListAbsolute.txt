@@ -167,3 +167,16 @@ C:\Users\ale03\OneDrive\Desktop\Progetto UM\GestioneAccessi\GestioneAccessi\obj\
 C:\Users\ale03\OneDrive\Desktop\Progetto UM\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
 C:\Users\ale03\OneDrive\Desktop\Progetto UM\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
 C:\Users\ale03\OneDrive\Desktop\Progetto UM\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.deps.json
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.dll
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\bin\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.AssemblyReference.cache
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfoInputs.cache
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.AssemblyInfo.cs
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.csproj.CoreCompileInputs.cache
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.sourcelink.json
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.dll
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\refint\GestioneAccessi.dll
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\GestioneAccessi.pdb
+C:\Users\ale03\OneDrive\Desktop\Progetto UM Ultimato\GestioneAccessi\GestioneAccessi\obj\Debug\net8.0\ref\GestioneAccessi.dll

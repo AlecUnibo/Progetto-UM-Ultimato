@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="~/css/Features/AccessoOspite/Ingresso.css" />
 </head>
 <body class="Color-main">
+    <div class="language-container">
+        <a href="#" class="language-selector" title="Selettore Lingua" data-title-key="languageSelector">IT</a>
+        <div class="popup-menu" id="language-popup">
+            <div class="menu-item selected" data-lang="IT">IT</div>
+            <div class="menu-item" data-lang="ENG">ENG</div>
+        </div>
+    </div>
     <div class="full-screen-container">
 
         <h1 class="Title-small">Planner.com</h1>
@@ -20,32 +27,33 @@
             <form id="formIngresso" method="post" action="/AccessoOspite/Ingresso">
                 <!-- Nome -->
                 <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="Nome" id="nome" placeholder="Nome" />
-                    <div class="error" id="errorNome">* Campo obbligatorio da compilare!!</div>
+                    <label for="nome" data-key="name">Nome:</label>
+                    <input type="text" name="Nome" id="nome" />
+                    <div class="error" id="errorNome" data-key="errore">* Campo obbligatorio da compilare!!</div>
                 </div>
 
                 <!-- Cognome -->
                 <div class="form-group">
-                    <label for="cognome">Cognome:</label>
-                    <input type="text" name="Cognome" id="cognome" placeholder="Cognome" />
-                    <div class="error" id="errorCognome">* Campo obbligatorio da compilare!!</div>
+                    <label for="cognome" data-key="surname"> Cognome:</label>
+                    <input type="text" name="Cognome" id="cognome"/>
+                    <div class="error" id="errorCognome" data-key="error">* Campo obbligatorio da compilare!!</div>
                 </div>
 
                 <!-- Azienda -->
                 <div class="form-group">
-                    <label for="azienda">Azienda:</label>
-                    <input type="text" name="Azienda" id="azienda" placeholder="Azienda" />
-                    <div class="error" id="errorAzienda">* Campo obbligatorio da compilare!!</div>
+                    <label for="azienda" data-key="company">Azienda:</label>
+                    <input type="text" name="Azienda" id="azienda"  />
+                    <div class="error" id="errorAzienda" data-key="error">* Campo obbligatorio da compilare!!</div>
                 </div>
 
                 <!-- Bottone di invio -->
-                <button type="submit" class="Buttom-input">Start Your Visit Now</button>
+                <button type="submit" class="Buttom-input" data-key="history">Inizia la tua visita</button>
             </form>
         </div>
     </div>
 
     <script>
+        
         document.getElementById("formIngresso").addEventListener("submit", function (e) {
             let valid = true;
 
@@ -82,6 +90,97 @@
             }
 
             if (!valid) e.preventDefault();
+        });
+    </script>
+    <script>
+        // Definizione delle traduzioni per la pagina Ingresso
+        const translations = {
+            ENG: {
+                languageSelector: "Language Selector",
+                name: "Name:",
+                surname: "Surname:",
+                company: "Company:",
+                errore: "* Field is required!",
+                error: "* Field is required!",
+                history: "Start your visit"
+            },
+            IT: {
+                languageSelector: "Selettore Lingua",
+                name: "Nome:",
+                surname: "Cognome:",
+                company: "Azienda:",
+                errore: "* Campo obbligatorio da compilare!!",
+                error: "* Campo obbligatorio da compilare!!",
+                history: "Inizia la tua visita"
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const languageSelector = document.querySelector(".language-selector");
+            const languagePopup = document.getElementById("language-popup");
+            const menuItems = document.querySelectorAll(".popup-menu .menu-item");
+
+            // Recupera la lingua salvata (se presente) o usa "IT" come default
+            const savedLang = localStorage.getItem("selectedLanguage") || "IT";
+            updatePageLanguage(savedLang);
+            languageSelector.textContent = savedLang;
+
+            languagePopup.style.display = "none";
+
+            // Apertura/chiusura del popup al click sul selettore
+            languageSelector.addEventListener("click", function (event) {
+                event.preventDefault();
+                const isVisible = languagePopup.style.display === "block";
+                languagePopup.style.display = isVisible ? "none" : "block";
+            });
+
+            // Gestione della scelta della lingua dal menu
+            menuItems.forEach((item) => {
+                item.addEventListener("click", function () {
+                    const selectedLang = this.dataset.lang;
+
+                    // Rimuovo la classe "selected" da tutti e la aggiungo all'elemento cliccato
+                    menuItems.forEach((el) => el.classList.remove("selected"));
+                    this.classList.add("selected");
+
+                    // Aggiorno il testo del selettore
+                    languageSelector.textContent = selectedLang;
+
+                    // Aggiorno i testi della pagina
+                    updatePageLanguage(selectedLang);
+
+                    // Nascondo il popup con un breve ritardo
+                    setTimeout(() => {
+                        languagePopup.style.display = "none";
+                    }, 200);
+                });
+            });
+
+            // Chiusura del popup se si clicca al di fuori del selettore o del menu
+            document.addEventListener("click", function (event) {
+                if (!languageSelector.contains(event.target) && !languagePopup.contains(event.target)) {
+                    languagePopup.style.display = "none";
+                }
+            });
+
+            // Funzione per aggiornare i testi in base alla lingua scelta
+            function updatePageLanguage(lang) {
+                const texts = translations[lang] || {};
+                document.querySelectorAll("[data-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-key");
+                    if (texts[key]) {
+                        element.textContent = texts[key];
+                    }
+                });
+                document.querySelectorAll("[data-title-key]").forEach(function (element) {
+                    const key = element.getAttribute("data-title-key");
+                    if (texts[key]) {
+                        element.title = texts[key];
+                    }
+                });
+                // Salva la lingua selezionata per future visite
+                localStorage.setItem("selectedLanguage", lang);
+            }
         });
     </script>
 </body>
